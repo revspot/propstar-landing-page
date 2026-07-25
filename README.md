@@ -1,72 +1,149 @@
-# Propstar — Public Site & Admin Console
+# Propstar — Public Site & Content Console
 
 A curated real-estate discovery platform ("Chosen, not chased") — explicitly **not a brokerage**.
 Built per `Propstar_Build_Playbook_v1.2.pdf` (design system, copy rules, "no prices" rule) and
-`Propstar Dev Handoff admin panel+main site.pdf` (architecture, data layer, matching engine, admin console).
+`Propstar Dev Handoff admin panel+main site.pdf` (architecture, data layer, matching engine).
+
+Deployed on **AWS Amplify Hosting** at https://propstarsolution.com.
 
 ## Files
 
 | File | Role |
 |---|---|
-| `index.html` | Public site — single-page app with 4 views (home / properties / about / detail) |
-| `admin.html` | Admin console — passcode-gated; Catalogue CRUD + Quiz builder + JSON export |
-| `propstar-data.js` | Shared data layer (`window.PROPSTAR`) — catalogue store, quiz config, matching engine |
-| `assets/` | Brand mark, hero video + poster, 16 marquee logos, 12 seed project photos |
+| `index.html` | The app shell: CSS, state, routing, modals, hero video, analytics |
+| `propstar-views.js` | **All markup.** Pure string builders, shared by the browser and the prerender |
+| `propstar-data.js` | Data layer (`window.PROPSTAR`) — content source, catalogue store, matching engine |
+| `scripts/build-content.js` | Validates content, regenerates `catalogue.json` + `cms/config.yml`, then prerenders |
+| `scripts/prerender.js` | Writes `dist/` — one real HTML file per route, plus sitemap and robots |
+| `scripts/check-matching.js` | Self-check for the matching engine's load-bearing assumptions |
+| `cms/` | Sveltia CMS — the console that publishes |
+| `content/` | The content itself (see `content/README.md`) |
+| `admin.html` | Legacy console. **Not deployed** — see "Two consoles" below |
+| `amplify.yml`, `customHttp.yml`, `customRules.json` | Deploy config (see `customRules.md`) |
 
 ## Run locally
 
-From inside this folder:
+Two loops, because the site is now prerendered:
 
-```
+```bash
+# 1. Verify real routes — /properties/, /project/<id>/, sitemap, meta tags.
+#    This is what actually ships.
+node scripts/build-content.js && npx serve dist -l 3030
+
+# 2. Iterate on CSS or the shell quickly, home page only, no rebuild.
 npx serve . -l 3030
 ```
-Then open `http://localhost:3030` (site) and `http://localhost:3030/admin.html` (console).
-The admin requires a passcode (ask the site owner). Only its SHA-256 hash lives in
-`admin.html` (`PASS_HASH` in `Admin.signIn`) — to rotate it, hash a new passcode and
-replace that constant. Client-side gating deters casual visitors, but for real
-security put server auth in front of `admin.html` before any serious use.
 
-No Node? Any static server works — `python3 -m http.server 3030` is fine too. The
-scroll-scrubbed hero video prefers a server with HTTP Range support (`npx serve` has it),
-but the page detects a server without it and self-heals by loading the clip into memory,
-so the animation works either way. Phones intentionally show a still hero image instead
-of the 44 MB video. Double-clicking `index.html` (no server) mostly works in a pinch,
-but a local server is the supported path.
+Loop 2 serves the unbuilt `index.html`, so **only `/` works** — every other route is a file that
+only exists in `dist/`. Use loop 1 before believing anything about a route other than home.
 
-## How the two apps talk
+`dist/` is generated and gitignored. `python3 -m http.server 3030` works too, but the
+scroll-scrubbed hero prefers a server with HTTP Range support (`npx serve` has it; the page
+self-heals into an in-memory blob if absent). Opening `index.html` off disk does **not** work —
+content is fetched over HTTP.
 
-Both import `propstar-data.js` and never touch storage directly. The admin writes the
-catalogue (`propstar_properties_v1`) and quiz config (`propstar_quiz_v2`) to localStorage;
-the public site re-reads both on `focus` and `storage` events, so edits appear in the
-other tab without a manual reload.
+## How a change reaches the site
 
-- **The one rule:** no rupee figure ever appears on a property. Pricing always reads
-  "On Request". Budget bands are internal matching attributes only.
-- **Lead capture:** the quiz's final step is the only form a visitor must fill, once ever
-  (`propstar_lead`). Returning visitors skip every ask (cards opened from the Properties
-  listing still pass through the gate modal by design — it's the primary capture surface).
-- **Matching:** location 50 / locality 25 / budget 30 (adjacent band ×0.5) / purpose 20,
-  ranked, top 6, never-empty fallback. Weights in `PROPSTAR.WEIGHTS`.
-- **Engagement capture (`window.Engage`):** the shortlist prompt auto-fires on
-  15s dwell, 30% scroll depth on home / properties / about, or exit-intent —
-  max 3 automatic shows per session, 30s cooldown, never mid-quiz, never on a
-  detail page (it has its own sticky CTA). A "Get your curated shortlist" chip
-  is pinned bottom-right from first paint for any visitor without a lead.
-  Tune `Engage.dwellMs / scrollPct / maxAuto` in `index.html`.
-  NOTE: once a device has submitted any form, prompts and chip stop permanently
-  by design — for client demos or testing, open the site with **`?demo=1`**,
-  which ignores the saved lead and session caps (10s spacing between shows).
-- **Catalogue:** 12 seed projects across 4 cities; Properties paginates 6 at a
-  time ("Show more"), filter chips show live per-city counts.
-- **Routing:** hash-based (`#/properties`, `#/about`, `#/project/<id>`) — browser
-  back/forward work and project pages are shareable. A direct project link for a
-  new visitor still passes through the lead gate.
+```
+edit at /cms/  →  Sveltia commits to main via the GitHub API
+               →  Amplify auto-builds
+               →  node scripts/build-content.js validates, regenerates and prerenders
+               →  a bad reference fails the build, so the site stays on the last good deploy
+```
 
-## Production TODO (from the spec, unchanged)
+`scripts/build-content.js` is the single build command. It is zero-dependency ES5 CommonJS — there
+is no `package.json` and nothing to install, deliberately.
 
-1. Real auth on the admin console (any passcode works today).
-2. Real endpoints for the three lead flows (gate / contact / enquiry) — currently toast-only.
-3. Backend store replacing localStorage; migrate via the admin's "Copy JSON".
-4. Image hosting — admin photo uploads are base64 data-URIs (will hit the ~5MB localStorage cap).
-5. URL routing per view/project for SEO + sharing.
-6. Referential-integrity warnings when quiz options that properties reference are deleted.
+## Content and routing
+
+- **Content** lives in `content/` and is edited at `/cms/`. Full field contract in
+  `content/README.md`. 40 projects across 9 cities.
+- **Routing** is real URLs via the History API: `/`, `/properties/`, `/about/`, `/privacy/`,
+  `/terms/`, `/project/<id>/`. Every one of those is a prerendered file with its own
+  `<title>`, description, canonical, OG/Twitter tags and JSON-LD, so crawlers and social
+  scrapers — which never run JavaScript — see real content. Old `#/...` links redirect
+  automatically on load.
+- **Trailing slashes matter.** They make directory-index resolution work identically on Amplify,
+  S3 and any static server with zero rewrite rules.
+- **The one rule:** no rupee figure ever appears on a property. Pricing always reads "On request".
+  Budget bands are internal matching attributes only, and never rendered.
+- **Lead capture:** four surfaces (quiz final step, contact, enquiry, shortlist), all routed
+  through a single `sendLead()` in `index.html`. Project *content* is public; only the actions
+  ask for details. See "Leads" below.
+- **Matching:** location 50 / locality 25 / budget 30 (adjacent band ×0.5) / purpose 20, ranked,
+  top 6, never-empty fallback. Weights in `PROPSTAR.WEIGHTS`. Guarded by
+  `scripts/check-matching.js` — **the budget band order in `content/quiz.json` is load-bearing.**
+- **Engagement capture (`window.Engage`):** the shortlist prompt auto-fires on 15s dwell, 30%
+  scroll depth, or exit-intent — max 3 per session, 30s cooldown, never mid-quiz, never on a
+  detail page (that has its own sticky CTA). Once a device has submitted anything, prompts stop.
+  For demos, open with **`?demo=1`** to ignore the saved lead and session caps.
+
+## Leads
+
+`sendLead()` POSTs a flat JSON object to the revspot leadgen listener. Every surface goes through
+it — a per-surface copy is how one of them quietly stops posting.
+
+**This needs CORS on `api.revspot.ai` to work from the browser:**
+
+```
+Access-Control-Allow-Origin: https://propstarsolution.com
+Access-Control-Allow-Methods: POST, OPTIONS
+Access-Control-Allow-Headers: Content-Type
+```
+plus `204` on `OPTIONS`. Until those headers exist, every lead fails the preflight and lands in a
+`localStorage` retry queue (`propstar_lead_queue`, capped at 20), which flushes on the next page
+load. Nothing is lost, but nothing is delivered either.
+
+Do **not** try to proxy this through an Amplify rewrite — it mangles POST. See `customRules.md`.
+
+Payload: whatever the form captured, plus `source`, `page_url`, `submitted_at`, the project fields
+on an enquiry, and the quiz answers as human-readable labels (`quiz_city`, `quiz_budget`, …).
+
+A saved lead expires after 90 days.
+
+## Analytics
+
+GA4 (`G-DNDDSBZ5VS`), with `send_page_view: false` — `index.html` fires `page_view` itself from the
+router so it stays in step with the per-route title. Events: `page_view`, `quiz_start`,
+`quiz_complete`, `view_item`, `generate_lead`, `shortlist_prompt_shown`, `lead_delivery_failed`.
+
+`generate_lead` fires on **submit**, not on delivery success — otherwise a broken endpoint would
+look identical to "nobody is submitting anything". `lead_delivery_failed` is the delivery signal.
+
+**No name, phone or email is ever sent to GA4.** That is a GA4 terms violation and grounds for
+property termination. Consent Mode v2 defaults to denied for EU/UK/EEA regions only.
+
+## Two consoles
+
+`/cms/` is the one that publishes — it commits to `main` and triggers a deploy.
+
+`admin.html` is the older console. Its edits only ever reach the current browser's `localStorage`,
+and its passcode is an unsalted SHA-256 hash sitting in a publicly readable file. It is
+**deliberately excluded from `dist/`**, so it is not reachable in production. Amplify's access
+control is per-branch and cannot protect a single path, so not shipping it *is* the security
+control. Keep it for local JSON export if useful; never publish it.
+
+Sign in to `/cms/` with **"Sign In Using Access Token"** and a GitHub PAT with repo scope.
+"Sign In with GitHub" is shown but will not work — it needs an OAuth relay, and Sveltia's default
+relay is Netlify's, which this site no longer uses. See `cms/config.yml.template`.
+
+## Deploying
+
+`amplify.yml` and `customHttp.yml` are picked up from the repo. Rewrites are **not** —
+Amplify has no file-based redirect config, so apply `customRules.json` by hand and
+**delete Amplify's auto-added SPA catch-all**. `customRules.md` explains why that rule is an SEO
+bug and how to assert it is gone.
+
+Watch the running cost: the hero video ladder is roughly 23–30 MB per desktop visit, about
+$4.50 per 1,000 visits in Amplify egress. `customHttp.yml` pins long cache lifetimes on the
+`.mp4` files, which is the single biggest lever. Set a CloudWatch billing alarm.
+
+## Known gaps
+
+1. The four footer social links are dead placeholders (`href="#"`). Needs a real `wa.me` link and
+   three profile URLs — this is also why the `Organization` JSON-LD omits `sameAs`.
+2. Lead delivery is blocked until CORS lands on `api.revspot.ai` (above).
+3. Photo uploads through the CMS go to `assets/projects` with un-hashed filenames, so replacing an
+   image reuses its name — hence the deliberately shorter cache lifetime on that directory.
+4. Adding a city also needs a cover image in `cityCovers` (`propstar-views.js`) — that map is code,
+   not content, so a city added in the CMS renders without a cover until someone edits it.

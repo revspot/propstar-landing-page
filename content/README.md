@@ -11,8 +11,9 @@ The site's content lives here, separate from its code.
 ## How a change reaches the site
 
 1. Edit at **`/cms/`** (Sveltia CMS). Saving commits the changed file to `main`.
-2. Netlify runs `node scripts/build-content.js`, which validates everything and
-   regenerates `catalogue.json` and `cms/config.yml`.
+2. AWS Amplify runs `node scripts/build-content.js`, which validates everything,
+   regenerates `catalogue.json` and `cms/config.yml`, then prerenders every page
+   into `dist/`.
 3. The site fetches `catalogue.json` and `quiz.json` at startup.
 
 If a project points at a city, locality, budget band, or purpose that does not exist in
@@ -30,8 +31,10 @@ node scripts/build-content.js
 `npx serve .` with no build step. If you edit a project file by hand, run the build so
 the committed copy keeps up.
 
-The old `/admin.html` console still works and still has the quiz builder and JSON export,
-but its edits only ever live in **your own browser**. `/cms/` is the one that publishes.
+The old `/admin.html` console still has a quiz builder and JSON export, but its edits only
+ever live in **your own browser**, and it is **not deployed** — it is excluded from the built
+site on purpose (its passcode is a client-side hash, and Amplify cannot password-protect a
+single path). `/cms/` is the one that publishes.
 
 ## Signing in to the CMS
 
@@ -71,7 +74,7 @@ or is skipped entirely, so a sparse project is safe to publish.
 | Field | Type | Notes |
 |---|---|---|
 | `order` | number | Display order, lowest first. Existing projects step by 10 so one can be slotted between two others. Stripped from the built catalogue |
-| `id` | string | Unique, and must match the filename. Used in the URL: `#/project/<id>` — changing it breaks shared links |
+| `id` | string | Unique, and must match the filename. Used in the URL: `/project/<id>/` — changing it breaks shared links and loses that page's search ranking |
 | `name` | string | Project name |
 | `developer` | string | Shown above the name |
 | `location` | string | Human-readable, e.g. `Yelahanka, Bengaluru` |
@@ -86,7 +89,7 @@ or is skipped entirely, so a sparse project is safe to publish.
 | `connectivity` | string[] | The "Getting around" list |
 | `developerNote` | string, optional | Extra paragraph about the developer |
 | `images` | string[] | Paths or URLs. **`images[0]` is the card and page hero**; the rest are the gallery |
-| `photoDescription` | string, optional | Editable in the admin; not currently rendered. Good candidate for image alt text |
+| `photoDescription` | string, optional | **Rendered as image alt text** on the card, the detail hero and every gallery image, and as `og:image:alt`. Describe what the render shows — it is what a screen reader announces and what image search reads |
 | `locationKey` | string | Must match a `locations[].key` in `quiz.json` |
 | `localityKey` | string | Must match a locality key inside that city, or `""` |
 | `nearbyKeys` | string[] | Other city keys to treat as "near" when matching |
