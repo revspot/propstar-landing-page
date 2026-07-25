@@ -1,0 +1,56 @@
+# Runs the content validator and prerender on every PR and push to main.
+#
+# Amplify already fails the deploy when content is broken, so this is not the
+# only gate — but a failing build on main means the site silently stays on the
+# previous deploy, and nobody looks at Amplify until someone reports a stale
+# page. Catching it on the PR is cheaper.
+#
+# No install step: scripts/build-content.js and scripts/prerender.js are ES5
+# CommonJS with zero npm dependencies.
+name: content
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Validates every project's city/locality/budget/purpose reference and
+      # that each image exists on disk, then prerenders all 45 pages.
+      # Exits non-zero on any dangling reference or missing shell marker.
+      - name: Build content and prerender
+        run: node scripts/build-content.js
+
+      # The generated files are committed, so a CMS edit that was not followed
+      # by a build would otherwise drift from its source.
+      - name: Generated files must be up to date
+        run: |
+          git diff --exit-code -- content/catalogue.json cms/config.yml \
+            || { echo "::error::content/catalogue.json or cms/config.yml is stale. Run 'node scripts/build-content.js' and commit the result."; exit 1; }
+
+      - name: Matching engine self-check
+        run: node scripts/check-matching.js
+
+      # The whole point of the SEO work: every page must ship real content.
+      # A silent prerender regression would otherwise pass unnoticed.
+      - name: Pages must contain real content
+        run: |
+          set -e
+          for f in dist/index.html dist/properties/index.html dist/about/index.html; do
+            grep -q '<h1' "$f" || { echo "::error::$f has no <h1>"; exit 1; }
+          done
+          words=$(sed 's/<[^>]*>/ /g' dist/project/godrej-arden/index.html | wc -w)
+          [ "$words" -gt 200 ] || { echo "::error::project page has only $words words"; exit 1; }
+          test -f dist/sitemap.xml && test -f dist/robots.txt
+          # admin.html must never be publishable
+          ! test -e dist/admin.html || { echo "::error::admin.html leaked into dist/"; exit 1; }
+          echo "dist OK: $(find dist -type f | wc -l) files"
