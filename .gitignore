@@ -1,0 +1,10 @@
+# Built site. scripts/build-content.js writes this on every build; Amplify
+# publishes it. Never commit it — a CSS tweak would otherwise show up as a
+# 45-file diff.
+dist/
+
+.DS_Store
+node_modules/
+.gstack/
+.env
+.env.*
