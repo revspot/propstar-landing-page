@@ -4,15 +4,16 @@
 
 backend:
   name: github
-  repo: Anirudh0304/prop-demo
+  repo: revspot/propstar-landing-page
   branch: main
 
 # Uploads land beside the renders that are already committed.
 media_folder: assets/projects
 public_folder: assets/projects
 
-# Edits are committed straight to main, which is what triggers the Netlify
-# deploy. Switch to `editorial_workflow` if you ever want a draft/review step.
+# Edits are committed straight to main, which is what triggers the Amplify
+# deploy. Switch to `editorial_workflow` if you ever want a draft/review step —
+# it pairs well with Amplify's pull-request previews.
 publish_mode: simple
 
 collections:

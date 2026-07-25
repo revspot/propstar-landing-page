@@ -6,17 +6,26 @@
 # locality, budget, and purpose options from content/quiz.json so the dropdowns
 # can never drift out of step with the quiz.
 
+# Sign-in: use "Sign In Using Access Token" with a GitHub PAT that has repo
+# scope. There is deliberately no `base_url` here, and that has a consequence
+# worth knowing: Sveltia's GitHub backend needs an OAuth client server for the
+# authorization-code flow, and for backward compatibility it defaults to
+# Netlify as that provider. This site is served from AWS Amplify, so that
+# default has nothing behind it — "Sign In with GitHub" will not work. Deploy
+# the Sveltia CMS Authenticator (a Cloudflare Worker) and set `base_url` here
+# if one-click sign-in becomes worth the infrastructure.
 backend:
   name: github
-  repo: Anirudh0304/prop-demo
+  repo: revspot/propstar-landing-page
   branch: main
 
 # Uploads land beside the renders that are already committed.
 media_folder: assets/projects
 public_folder: assets/projects
 
-# Edits are committed straight to main, which is what triggers the Netlify
-# deploy. Switch to `editorial_workflow` if you ever want a draft/review step.
+# Edits are committed straight to main, which is what triggers the Amplify
+# deploy. Switch to `editorial_workflow` if you ever want a draft/review step —
+# it pairs well with Amplify's pull-request previews.
 publish_mode: simple
 
 collections:

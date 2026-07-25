@@ -5,9 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>Propstar — Content</title>
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 <body>
-<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+<!-- Pinned, with integrity. Unpinned this resolved to whatever was newest, which
+     is two separate risks: a breaking upstream release takes the admin down with
+     no commit here, and a compromised publish would execute arbitrary JS in a
+     session holding a GitHub token with write access to this repo.
+     To upgrade: pick a version, then recompute the hash —
+       curl -sL https://unpkg.com/@sveltia/cms@<VER>/dist/sveltia-cms.js \
+         | openssl dgst -sha384 -binary | openssl base64 -A
+     Stronger still would be vendoring the file under /assets and dropping
+     unpkg.com from the CSP entirely; not done because Sveltia may fetch
+     additional chunks at runtime and a partial vendor would break the CMS. -->
+<script src="https://unpkg.com/@sveltia/cms@0.172.4/dist/sveltia-cms.js"
+        integrity="sha384-Sj4Mfbg9OjjwG2ZE/YeUYu7xbZRTXGFg/wa/nszj3KzItKuRLEmGqSpV5C9YI2Ge"
+        crossorigin="anonymous"></script>
 </body>
 </html>
