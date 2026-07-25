@@ -1,8 +1,16 @@
-# Netlify runs the content build on every deploy, so a CMS commit to
-# content/projects/ is validated and folded into content/catalogue.json
-# before the site goes live. A broken city or budget reference fails the
-# deploy rather than silently unmatching a property.
+# Amplify is the primary host — see amplify.yml, customHttp.yml and customRules.md.
+# This file is kept only as a working fallback until the Amplify cutover is proven,
+# then it should be deleted. It must stay in step with amplify.yml: the site is
+# PRERENDERED into dist/, so publishing the repo root would serve an index.html
+# whose <body> has no content in it and whose other routes do not exist as files.
+#
+# Netlify would also need the security headers and cache lifetimes from
+# customHttp.yml, and the redirect rules from customRules.json, neither of which
+# it reads. Do not treat this as a like-for-like alternative.
 
 [build]
   command = "node scripts/build-content.js"
-  publish = "."
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

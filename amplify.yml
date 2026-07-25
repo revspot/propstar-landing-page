@@ -1,0 +1,58 @@
+# AWS Amplify Hosting build spec.
+#
+# This is a plain static site: no package.json, no node_modules, no bundler.
+# scripts/build-content.js is ES5 CommonJS with zero npm dependencies, so there
+# is nothing to install. It validates the content, regenerates
+# content/catalogue.json and cms/config.yml, then prerenders all 45 pages into
+# dist/. A dangling city/budget reference or a broken shell marker exits
+# non-zero, which fails the deploy rather than publishing a site where a
+# property can never match the quiz — or one where every page ships empty.
+#
+# A committed amplify.yml fully overrides Amplify's framework autodetection, so
+# the missing package.json is not a problem. The console's create-app wizard may
+# prefill a React/Next buildspec; this file wins.
+#
+# We publish dist/ rather than the repo root deliberately. Amplify's
+# artifacts.files globs are positive-match only — there is no exclusion syntax —
+# so publishing "/" gives no guarantee that .git/ (232 MB of history) and
+# .claude/ stay unreachable. scripts/prerender.js writes dist/ from an explicit
+# allowlist, so only what it copies can ever be served. That is also what keeps
+# admin.html off the web: its passcode is a client-side SHA-256 compare, and
+# Amplify's access control is per-branch, so no path rule could protect it.
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # Amplify does not document .nvmrc support; `nvm use` in preBuild is the
+        # documented mechanism, and it also overrides any Node version set by
+        # console live package updates. The build script is ES5 and needs
+        # nothing modern — this is pinned so a future image default cannot
+        # silently change the runtime under it.
+        # Requires the Amazon Linux 2023 build image (AL2 cannot run Node 20+).
+        - nvm use 20
+        - node --version
+    build:
+      commands:
+        - node scripts/build-content.js
+
+        # Fail loudly rather than deploying an empty or half-written site.
+        # Cheap insurance against a silent prerender regression.
+        - test -f dist/index.html
+        - test -f dist/properties/index.html
+        - test -f dist/project/godrej-arden/index.html
+        - test -f dist/content/catalogue.json
+        - test -f dist/content/quiz.json
+        - test -f dist/cms/config.yml
+        - test -f dist/sitemap.xml
+        - test -f dist/robots.txt
+        # admin.html must never reach the web. Assert the exclusion holds.
+        - '! test -e dist/admin.html'
+        - '! test -e dist/cms/config.yml.template'
+        - '! test -e dist/content/projects'
+        - 'echo "staged: $(find dist -type f | wc -l) files, $(du -sh dist | cut -f1)"'
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  # No cache paths: there are no npm dependencies to restore.

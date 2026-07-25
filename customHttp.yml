@@ -1,0 +1,118 @@
+# Custom response headers for Amplify Hosting.
+#
+# These live here and NOT under a `customHeaders` key in amplify.yml, because
+# AWS deprecates that form and directs you to this file. This file also
+# overrides anything set in the console's Custom headers section.
+#
+# Pattern semantics (verified against a live Amplify-hosted site, since the docs
+# are thin on this):
+#   '**/*'         matches the bare root document "/" as well as nested paths
+#   '/a/**/*'      matches nested paths under /a/
+#   Cache-Control  is applied ONLY to 200 responses; the other headers apply to
+#                  3xx and 4xx too
+#
+# NO TWO PATTERNS BELOW SET THE SAME HEADER KEY. Amplify does not document which
+# rule wins when two matching patterns set one key, so the config is arranged to
+# never depend on it. That is why there is no global Cache-Control with per-path
+# overrides, and why /cms/ gets one union CSP rather than its own looser policy.
+#
+# Amplify's platform default on a 200 is:
+#   cache-control: public, max-age=0, s-maxage=31536000
+# Edge-cached for a year, revalidated by the browser — which is exactly right for
+# HTML and content/*.json, and every CI/CD deploy clears the edge cache so a CMS
+# commit publishes immediately. So those need no rule. The default's max-age=0 is
+# wrong only for the large immutable media, which is what the rules below fix.
+customHeaders:
+
+  # ------------------------------------------------------------------ security
+  - pattern: '**/*'
+    headers:
+      # 2 years. Add "; preload" only once you are certain every current and
+      # future subdomain of propstarsolution.com is HTTPS-only — it is hard to
+      # walk back.
+      - key: 'Strict-Transport-Security'
+        value: 'max-age=63072000; includeSubDomains'
+      - key: 'X-Content-Type-Options'
+        value: 'nosniff'
+      - key: 'Referrer-Policy'
+        value: 'strict-origin-when-cross-origin'
+      # X-Frame-Options for older browsers; frame-ancestors in the CSP is the
+      # modern equivalent and wins where both are understood.
+      - key: 'X-Frame-Options'
+        value: 'DENY'
+      - key: 'Permissions-Policy'
+        value: 'accelerometer=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()'
+
+      # Pragmatic CSP. A nonce/strict policy is not reachable here: index.html
+      # carries 37 onclick=, 1 onload= and 2 onsubmit= inline handlers, 2 inline
+      # <script> blocks, 1 <style> block and 35 style="" attributes — so BOTH
+      # script-src and style-src need 'unsafe-inline'. Refactoring all of that
+      # away is a large change for a modest gain, and those same inline handlers
+      # are what make the prerendered HTML interactive before hydration.
+      #
+      # What this policy still buys: a closed allowlist of script and connect
+      # origins, no plugins, no framing, no <base> hijack, and forced HTTPS
+      # subresources.
+      #
+      # Single UNION policy covering the site and /cms/ — see the same-key note
+      # at the top. Origins, and why each is present:
+      #   fonts.googleapis.com     Google Fonts stylesheet (index.html)
+      #   fonts.gstatic.com        the font files
+      #   googletagmanager.com     GA4 gtag.js
+      #   *.google-analytics.com   GA4 collect beacons, incl. region1
+      #   unpkg.com                Sveltia CMS bundle (cms/index.html)
+      #   api.github.com           Sveltia CMS GitHub backend reads/writes
+      #   *.githubusercontent.com  CMS avatars and raw content
+      #   api.revspot.ai           lead endpoint, called DIRECTLY with CORS.
+      #                            Do not try to proxy it through an Amplify
+      #                            rewrite — see customRules.json.
+      #   blob:                    the hero fetches videos as blobs and assigns
+      #                            URL.createObjectURL() to video.src
+      - key: 'Content-Security-Policy'
+        value: >-
+          default-src 'self';
+          base-uri 'self';
+          object-src 'none';
+          frame-ancestors 'none';
+          form-action 'self';
+          script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://unpkg.com;
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+          font-src 'self' https://fonts.gstatic.com data:;
+          img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://avatars.githubusercontent.com https://raw.githubusercontent.com;
+          media-src 'self' blob:;
+          connect-src 'self' blob: https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://api.github.com https://unpkg.com https://raw.githubusercontent.com https://api.revspot.ai;
+          worker-src 'self' blob:;
+          manifest-src 'self';
+          upgrade-insecure-requests
+
+  # ------------------------------------------------------- long-lived media
+  # The hero .mp4 files never change name and total ~52 MB. This is the single
+  # biggest egress lever on the site: Amplify's default max-age=0 makes every
+  # returning visitor revalidate a 22 MB file, and at $0.15/GB the video ladder
+  # is roughly $4.50 per 1,000 desktop visits.
+  - pattern: '**/*.mp4'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=31536000, s-maxage=31536000, immutable'
+
+  # Developer logos: stable filenames, safe to pin hard.
+  - pattern: '/assets/logos/**/*'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=31536000, s-maxage=31536000, immutable'
+
+  # CMS-uploaded project renders. media_folder is assets/projects and Sveltia
+  # does NOT content-hash filenames, so an editor replacing an image reuses its
+  # name. `immutable` here would pin the stale render in browsers for a year.
+  # One day, and no immutable.
+  - pattern: '/assets/projects/**/*'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=86400'
+
+  # The CMS is tooling, not content, and must never be indexed. cms/index.html
+  # already carries a robots meta tag; this covers the whole directory.
+  - pattern: '/cms/**/*'
+    headers:
+      - key: 'X-Robots-Tag'
+        value: 'noindex, nofollow'
