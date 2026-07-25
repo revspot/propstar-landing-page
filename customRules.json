@@ -1,11 +1,5 @@
 [
   {
-    "source": "https://www.propstarsolution.com",
-    "target": "https://propstarsolution.com",
-    "status": "301",
-    "condition": null
-  },
-  {
     "source": "/properties",
     "target": "/properties/index.html",
     "status": "200",

@@ -20,6 +20,14 @@
 # admin.html off the web: its passcode is a client-side SHA-256 compare, and
 # Amplify's access control is per-branch, so no path rule could protect it.
 version: 1
+env:
+  variables:
+    # Drives canonicals, og:url, sitemap, robots.txt and JSON-LD @ids. Anything
+    # other than https://propstarsolution.com is treated as non-production by
+    # scripts/prerender.js, which means noindex + Disallow: / + no GA4 tag.
+    # This is the ONE line that differs from the main branch.
+    # An Amplify console environment variable for the branch overrides it.
+    SITE_ORIGIN: https://beta.propstarsolution.com
 frontend:
   phases:
     preBuild:

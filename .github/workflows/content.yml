@@ -27,8 +27,13 @@ jobs:
       # Validates every project's city/locality/budget/purpose reference and
       # that each image exists on disk, then prerenders all 45 pages.
       # Exits non-zero on any dangling reference or missing shell marker.
+      # Build with the same SITE_ORIGIN the branch deploys with, so the
+      # assertions below check what actually ships. amplify.yml is the source of
+      # truth for the value; this mirrors it.
       - name: Build content and prerender
         run: node scripts/build-content.js
+        env:
+          SITE_ORIGIN: https://beta.propstarsolution.com
 
       # The generated files are committed, so a CMS edit that was not followed
       # by a build would otherwise drift from its source.
@@ -51,6 +56,11 @@ jobs:
           words=$(sed 's/<[^>]*>/ /g' dist/project/godrej-arden/index.html | wc -w)
           [ "$words" -gt 200 ] || { echo "::error::project page has only $words words"; exit 1; }
           test -f dist/sitemap.xml && test -f dist/robots.txt
+          # beta must never be indexable and must never carry the GA4 tag
+          grep -q 'noindex,nofollow' dist/index.html || { echo "::error::beta build is indexable"; exit 1; }
+          grep -q 'Disallow: /' dist/robots.txt || { echo "::error::beta robots.txt allows crawling"; exit 1; }
+          ! grep -q 'G-DNDDSBZ5VS' dist/index.html || { echo "::error::GA4 tag present in a beta build"; exit 1; }
+          ! grep -rq 'https://propstarsolution.com/' dist --include='*.xml' || { echo "::error::production origin in beta sitemap"; exit 1; }
           # admin.html must never be publishable
           ! test -e dist/admin.html || { echo "::error::admin.html leaked into dist/"; exit 1; }
           echo "dist OK: $(find dist -type f | wc -l) files"

@@ -24,7 +24,21 @@ var path = require('path');
 
 var ROOT = path.join(__dirname, '..');
 var DIST = path.join(ROOT, 'dist');
-var ORIGIN = 'https://propstarsolution.com';
+
+/* ---------- which site is this? ----------
+   One switch for the whole build, set per Amplify branch via the SITE_ORIGIN
+   environment variable. Keeping it here rather than hardcoded per branch means
+   beta and main differ by one value instead of by content, so merging between
+   them does not fight over canonicals in 45 files.
+
+   Everything else derives from it, and the DEFAULT IS PRODUCTION-SAFE: only the
+   canonical production origin is treated as production. A new branch or a typo'd
+   origin therefore gets noindex and no analytics, which is the failure mode you
+   want — the opposite default would quietly index a staging site against the
+   real one. */
+var PRODUCTION_ORIGIN = 'https://propstarsolution.com';
+var ORIGIN = String(process.env.SITE_ORIGIN || PRODUCTION_ORIGIN).replace(/\/+$/, '');
+var IS_PRODUCTION = ORIGIN === PRODUCTION_ORIGIN;
 
 /* Exactly what the public site is made of. Everything absent here is
    unreachable on the web, which is the point — it is how admin.html,
@@ -98,7 +112,11 @@ function headFor(page) {
     '<title>' + esc(page.title) + '</title>',
     '<meta name="description" content="' + esc(page.desc) + '">',
     '<link rel="canonical" href="' + url + '">',
-    '<meta name="robots" content="index,follow,max-image-preview:large">',
+    /* A staging domain that gets indexed competes with the real site for its own
+       keywords and splits the ranking signals. noindex,nofollow everywhere that
+       is not production. */
+    '<meta name="robots" content="' +
+      (IS_PRODUCTION ? 'index,follow,max-image-preview:large' : 'noindex,nofollow') + '">',
     '<meta property="og:type" content="' + (page.view === 'detail' ? 'article' : 'website') + '">',
     '<meta property="og:site_name" content="Propstar Solution">',
     '<meta property="og:locale" content="en_IN">',
@@ -337,7 +355,20 @@ function buildPage(shell, page, V, S) {
       view: page.view,
       id: page.prop ? page.prop.id : null,
       pcount: page.pcount || null
+    }).replace(/</g, '\\u003c') + ';' +
+    /* So a lead submitted from beta is filterable in the CRM rather than
+       indistinguishable from a real one. */
+    'window.__PS_SITE__=' + JSON.stringify({
+      env: IS_PRODUCTION ? 'production' : 'beta',
+      origin: ORIGIN
     }).replace(/</g, '\\u003c') + ';</script>', 'the ssg:route marker');
+
+  /* Strip the GA4 tag on anything that is not production, so beta traffic never
+     reaches the real property. */
+  if (!IS_PRODUCTION) {
+    html = sub(html, /<!-- ssg:analytics -->[\s\S]*?<!-- \/ssg:analytics -->/,
+      '<!-- analytics omitted: non-production build -->', 'the ssg:analytics markers');
+  }
 
   /* No .view-in wrapper on a prerendered page: it is a 600ms opacity 0->1
      entrance, and delaying paint for content already in the bytes is the
@@ -381,6 +412,13 @@ function sitemap(pages) {
 }
 
 function robots() {
+  /* Non-production: refuse everything, and do not advertise a sitemap. Belt and
+     braces with the noindex meta tag, because robots.txt stops the crawl while
+     the meta tag stops indexing of anything already fetched. */
+  if (!IS_PRODUCTION) {
+    return '# Non-production build (' + ORIGIN + '). Not for indexing.\n' +
+      'User-agent: *\nDisallow: /\n';
+  }
   /* No Disallow for /content/ or /assets/: Google's renderer honours robots.txt
      for subresources, so blocking catalogue.json would make every page render
      as the contentError panel inside Googlebot. And no mention of admin.html —

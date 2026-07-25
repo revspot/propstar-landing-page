@@ -5,14 +5,18 @@
 backend:
   name: github
   repo: revspot/propstar-landing-page
-  branch: main
+  # BETA BRANCH. Edits here commit to `beta` and deploy to
+  # beta.propstarsolution.com. This line is the difference between the beta and
+  # main branches of this file — leave it alone when merging, or beta editors
+  # start publishing straight to production.
+  branch: beta
 
 # Uploads land beside the renders that are already committed.
 media_folder: assets/projects
 public_folder: assets/projects
 
-# Edits are committed straight to main, which is what triggers the Amplify
-# deploy. Switch to `editorial_workflow` if you ever want a draft/review step —
+# Edits are committed straight to the branch above, which is what triggers the
+# Amplify deploy for that branch. Switch to `editorial_workflow` if you ever want a draft/review step —
 # it pairs well with Amplify's pull-request previews.
 publish_mode: simple
 
@@ -43,8 +47,9 @@ collections:
         widget: string
         pattern: ['^[a-z0-9-]+$', 'Lowercase letters, numbers and hyphens only']
         hint: >
-          The shareable web address (#/project/THIS) and the filename. Changing
-          it on a live project breaks any link already shared.
+          The shareable web address (/project/THIS/) and the filename. Changing
+          it on a live project breaks every link already shared AND loses that
+          page's search ranking.
 
       - { label: Project name, name: name, widget: string }
       - { label: Developer, name: developer, widget: string }
@@ -96,7 +101,7 @@ collections:
         field: { label: Image, name: image, widget: image }
         hint: The first image is the card and the page hero. The rest become the gallery.
 
-      - { label: Photo description, name: photoDescription, widget: string, required: false, hint: 'Not shown on the site yet. Useful as alt text later.' }
+      - { label: Photo description, name: photoDescription, widget: string, required: false, hint: 'Used as the image alt text on the card, the hero and every gallery image, and in link previews. Describe what the render shows.' }
 
       - label: City
         name: locationKey
