@@ -33,9 +33,12 @@
      Nothing else in the app changes. Field names are the contract — see
      content/README.md for the schema. */
 
+  /* Root-absolute, not relative: the site is served at nested paths now
+     (/properties/, /project/<id>/), where 'content/…' would resolve to
+     /project/<id>/content/… and 404 the whole page into contentError. */
   var SOURCE = {
-    catalogue: 'content/catalogue.json',
-    quiz: 'content/quiz.json'
+    catalogue: '/content/catalogue.json',
+    quiz: '/content/quiz.json'
   };
 
   function fetchJSON(url) {
@@ -68,6 +71,16 @@
       CONTENT.quiz = c.quiz;
       return CONTENT;
     });
+  }
+
+  /* The build-time prerender already holds the content in memory — it just
+     wrote catalogue.json — so it seeds the cache directly instead of fetching.
+     There is no fetch in Node, and re-reading the file we just wrote would be
+     a second source of truth. */
+  function setContent(c) {
+    CONTENT.projects = c.projects;
+    CONTENT.quiz = c.quiz;
+    return CONTENT;
   }
 
   /* 'seed' now means 'as published', i.e. the content source without any
@@ -227,7 +240,7 @@
   /* ---------- export ---------- */
 
   window.PROPSTAR = {
-    boot: boot, ready: ready, SOURCE: SOURCE,
+    boot: boot, ready: ready, setContent: setContent, SOURCE: SOURCE,
     uid: uid, slug: slug,
     load: load, save: save, resetSeed: resetSeed,
     loadQuiz: loadQuiz, saveQuiz: saveQuiz, resetQuiz: resetQuiz,

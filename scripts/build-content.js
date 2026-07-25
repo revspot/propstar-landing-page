@@ -125,11 +125,21 @@ projects.sort(function (a, b) {
   return d !== 0 ? d : String(a.name).localeCompare(String(b.name));
 });
 
+/* The CMS writes image paths relative (public_folder: assets/projects), which
+   breaks at a nested URL like /project/<id>/. Root-absolutise here rather than
+   in the 40 source files, so Sveltia's media picker keeps working and editors
+   never have to think about it. */
+function absImage(src) {
+  var s = String(src);
+  return /^https?:/.test(s) ? s : '/' + s.replace(/^\/+/, '');
+}
+
 var catalogue = projects.map(function (p) {
   var out = {};
   Object.keys(p).forEach(function (k) {
     if (k !== '_file' && k !== 'order') out[k] = p[k];   // build-time only
   });
+  if (Array.isArray(out.images)) out.images = out.images.map(absImage);
   return out;
 });
 
@@ -179,3 +189,8 @@ console.log('Content OK: ' + catalogue.length + ' projects, ' +
   catalogue.reduce(function (n, p) { return n + (p.images || []).length; }, 0) + ' images.');
 console.log('  wrote content/catalogue.json');
 console.log('  wrote cms/config.yml (options from quiz.json)');
+
+/* Prerender last, once the catalogue it renders from is on disk and validated.
+   It throws on any problem, so a broken shell marker or a relative path fails
+   the deploy the same way a dangling content reference does. */
+require('./prerender.js')(catalogue, quiz);

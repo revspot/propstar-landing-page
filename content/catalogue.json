@@ -37,11 +37,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-arden-01.webp",
-   "assets/projects/godrej-arden-02.webp",
-   "assets/projects/godrej-arden-03.webp",
-   "assets/projects/godrej-arden-04.webp",
-   "assets/projects/godrej-arden-05.webp"
+   "/assets/projects/godrej-arden-01.webp",
+   "/assets/projects/godrej-arden-02.webp",
+   "/assets/projects/godrej-arden-03.webp",
+   "/assets/projects/godrej-arden-04.webp",
+   "/assets/projects/godrej-arden-05.webp"
   ],
   "photoDescription": "Landscaped residential towers amid greens",
   "locationKey": "ncr",
@@ -93,11 +93,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-aveline-01.webp",
-   "assets/projects/godrej-aveline-02.webp",
-   "assets/projects/godrej-aveline-03.webp",
-   "assets/projects/godrej-aveline-04.webp",
-   "assets/projects/godrej-aveline-05.webp"
+   "/assets/projects/godrej-aveline-01.webp",
+   "/assets/projects/godrej-aveline-02.webp",
+   "/assets/projects/godrej-aveline-03.webp",
+   "/assets/projects/godrej-aveline-04.webp",
+   "/assets/projects/godrej-aveline-05.webp"
   ],
   "photoDescription": "Garden-wrapped residential towers with pool",
   "locationKey": "bengaluru",
@@ -145,14 +145,14 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-horizon-01.webp",
-   "assets/projects/godrej-horizon-02.webp",
-   "assets/projects/godrej-horizon-03.webp",
-   "assets/projects/godrej-horizon-04.webp",
-   "assets/projects/godrej-horizon-05.webp",
-   "assets/projects/godrej-horizon-06.webp",
-   "assets/projects/godrej-horizon-07.webp",
-   "assets/projects/godrej-horizon-08.webp"
+   "/assets/projects/godrej-horizon-01.webp",
+   "/assets/projects/godrej-horizon-02.webp",
+   "/assets/projects/godrej-horizon-03.webp",
+   "/assets/projects/godrej-horizon-04.webp",
+   "/assets/projects/godrej-horizon-05.webp",
+   "/assets/projects/godrej-horizon-06.webp",
+   "/assets/projects/godrej-horizon-07.webp",
+   "/assets/projects/godrej-horizon-08.webp"
   ],
   "photoDescription": "High-rise towers over the Wadala skyline",
   "locationKey": "mumbai",
@@ -206,14 +206,14 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-ivara-01.webp",
-   "assets/projects/godrej-ivara-02.webp",
-   "assets/projects/godrej-ivara-03.webp",
-   "assets/projects/godrej-ivara-04.webp",
-   "assets/projects/godrej-ivara-05.webp",
-   "assets/projects/godrej-ivara-06.webp",
-   "assets/projects/godrej-ivara-07.webp",
-   "assets/projects/godrej-ivara-08.webp"
+   "/assets/projects/godrej-ivara-01.webp",
+   "/assets/projects/godrej-ivara-02.webp",
+   "/assets/projects/godrej-ivara-03.webp",
+   "/assets/projects/godrej-ivara-04.webp",
+   "/assets/projects/godrej-ivara-05.webp",
+   "/assets/projects/godrej-ivara-06.webp",
+   "/assets/projects/godrej-ivara-07.webp",
+   "/assets/projects/godrej-ivara-08.webp"
   ],
   "photoDescription": "Modern towers above the Kharadi corridor",
   "locationKey": "pune",
@@ -267,14 +267,14 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-brooklyn-avenue-01.webp",
-   "assets/projects/godrej-brooklyn-avenue-02.webp",
-   "assets/projects/godrej-brooklyn-avenue-03.webp",
-   "assets/projects/godrej-brooklyn-avenue-04.webp",
-   "assets/projects/godrej-brooklyn-avenue-05.webp",
-   "assets/projects/godrej-brooklyn-avenue-06.webp",
-   "assets/projects/godrej-brooklyn-avenue-07.webp",
-   "assets/projects/godrej-brooklyn-avenue-08.webp"
+   "/assets/projects/godrej-brooklyn-avenue-01.webp",
+   "/assets/projects/godrej-brooklyn-avenue-02.webp",
+   "/assets/projects/godrej-brooklyn-avenue-03.webp",
+   "/assets/projects/godrej-brooklyn-avenue-04.webp",
+   "/assets/projects/godrej-brooklyn-avenue-05.webp",
+   "/assets/projects/godrej-brooklyn-avenue-06.webp",
+   "/assets/projects/godrej-brooklyn-avenue-07.webp",
+   "/assets/projects/godrej-brooklyn-avenue-08.webp"
   ],
   "photoDescription": "Brooklyn-style towers at golden hour",
   "locationKey": "hyderabad",
@@ -325,14 +325,14 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-varanya-01.webp",
-   "assets/projects/godrej-varanya-02.webp",
-   "assets/projects/godrej-varanya-03.webp",
-   "assets/projects/godrej-varanya-04.webp",
-   "assets/projects/godrej-varanya-05.webp",
-   "assets/projects/godrej-varanya-06.webp",
-   "assets/projects/godrej-varanya-07.webp",
-   "assets/projects/godrej-varanya-08.webp"
+   "/assets/projects/godrej-varanya-01.webp",
+   "/assets/projects/godrej-varanya-02.webp",
+   "/assets/projects/godrej-varanya-03.webp",
+   "/assets/projects/godrej-varanya-04.webp",
+   "/assets/projects/godrej-varanya-05.webp",
+   "/assets/projects/godrej-varanya-06.webp",
+   "/assets/projects/godrej-varanya-07.webp",
+   "/assets/projects/godrej-varanya-08.webp"
   ],
   "photoDescription": "Towers at the foothills of the Kharghar Hills",
   "locationKey": "navimumbai",
@@ -386,11 +386,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-crown-01.webp",
-   "assets/projects/godrej-crown-02.webp",
-   "assets/projects/godrej-crown-03.webp",
-   "assets/projects/godrej-crown-04.webp",
-   "assets/projects/godrej-crown-05.webp"
+   "/assets/projects/godrej-crown-01.webp",
+   "/assets/projects/godrej-crown-02.webp",
+   "/assets/projects/godrej-crown-03.webp",
+   "/assets/projects/godrej-crown-04.webp",
+   "/assets/projects/godrej-crown-05.webp"
   ],
   "photoDescription": "Twilight exterior with clubhouse pool",
   "locationKey": "ncr",
@@ -441,11 +441,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-samaris-01.webp",
-   "assets/projects/godrej-samaris-02.webp",
-   "assets/projects/godrej-samaris-03.webp",
-   "assets/projects/godrej-samaris-04.webp",
-   "assets/projects/godrej-samaris-05.webp"
+   "/assets/projects/godrej-samaris-01.webp",
+   "/assets/projects/godrej-samaris-02.webp",
+   "/assets/projects/godrej-samaris-03.webp",
+   "/assets/projects/godrej-samaris-04.webp",
+   "/assets/projects/godrej-samaris-05.webp"
   ],
   "photoDescription": "Dusk exterior with topiary garden",
   "locationKey": "ncr",
@@ -492,11 +492,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-riverine-01.webp",
-   "assets/projects/godrej-riverine-02.webp",
-   "assets/projects/godrej-riverine-03.webp",
-   "assets/projects/godrej-riverine-04.webp",
-   "assets/projects/godrej-riverine-05.webp"
+   "/assets/projects/godrej-riverine-01.webp",
+   "/assets/projects/godrej-riverine-02.webp",
+   "/assets/projects/godrej-riverine-03.webp",
+   "/assets/projects/godrej-riverine-04.webp",
+   "/assets/projects/godrej-riverine-05.webp"
   ],
   "photoDescription": "Dusk exterior with lagoon lawns",
   "locationKey": "ncr",
@@ -548,11 +548,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-reserve-01.webp",
-   "assets/projects/godrej-reserve-02.webp",
-   "assets/projects/godrej-reserve-03.webp",
-   "assets/projects/godrej-reserve-04.webp",
-   "assets/projects/godrej-reserve-05.webp"
+   "/assets/projects/godrej-reserve-01.webp",
+   "/assets/projects/godrej-reserve-02.webp",
+   "/assets/projects/godrej-reserve-03.webp",
+   "/assets/projects/godrej-reserve-04.webp",
+   "/assets/projects/godrej-reserve-05.webp"
   ],
   "photoDescription": "Forest-edged community with amphitheatre garden",
   "locationKey": "bengaluru",
@@ -603,11 +603,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-vanantara-01.webp",
-   "assets/projects/godrej-vanantara-02.webp",
-   "assets/projects/godrej-vanantara-03.webp",
-   "assets/projects/godrej-vanantara-04.webp",
-   "assets/projects/godrej-vanantara-05.webp"
+   "/assets/projects/godrej-vanantara-01.webp",
+   "/assets/projects/godrej-vanantara-02.webp",
+   "/assets/projects/godrej-vanantara-03.webp",
+   "/assets/projects/godrej-vanantara-04.webp",
+   "/assets/projects/godrej-vanantara-05.webp"
   ],
   "photoDescription": "Forest-edged towers with mirror-water clubhouse",
   "locationKey": "bengaluru",
@@ -660,11 +660,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-kada-agrahara-01.webp",
-   "assets/projects/godrej-kada-agrahara-02.webp",
-   "assets/projects/godrej-kada-agrahara-03.webp",
-   "assets/projects/godrej-kada-agrahara-04.webp",
-   "assets/projects/godrej-kada-agrahara-05.webp"
+   "/assets/projects/godrej-kada-agrahara-01.webp",
+   "/assets/projects/godrej-kada-agrahara-02.webp",
+   "/assets/projects/godrej-kada-agrahara-03.webp",
+   "/assets/projects/godrej-kada-agrahara-04.webp",
+   "/assets/projects/godrej-kada-agrahara-05.webp"
   ],
   "photoDescription": "High-rise towers with podium gardens",
   "locationKey": "bengaluru",
@@ -712,11 +712,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/godrej-trilogy-01.webp",
-   "assets/projects/godrej-trilogy-02.webp",
-   "assets/projects/godrej-trilogy-03.webp",
-   "assets/projects/godrej-trilogy-04.webp",
-   "assets/projects/godrej-trilogy-05.webp"
+   "/assets/projects/godrej-trilogy-01.webp",
+   "/assets/projects/godrej-trilogy-02.webp",
+   "/assets/projects/godrej-trilogy-03.webp",
+   "/assets/projects/godrej-trilogy-04.webp",
+   "/assets/projects/godrej-trilogy-05.webp"
   ],
   "photoDescription": "Aerial twilight view of sea-face towers",
   "locationKey": "mumbai",
@@ -767,11 +767,11 @@
   ],
   "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
   "images": [
-   "assets/projects/skyshore-01.webp",
-   "assets/projects/skyshore-02.webp",
-   "assets/projects/skyshore-03.webp",
-   "assets/projects/skyshore-04.webp",
-   "assets/projects/skyshore-05.webp"
+   "/assets/projects/skyshore-01.webp",
+   "/assets/projects/skyshore-02.webp",
+   "/assets/projects/skyshore-03.webp",
+   "/assets/projects/skyshore-04.webp",
+   "/assets/projects/skyshore-05.webp"
   ],
   "photoDescription": "Sea-facing towers with twilight pool deck",
   "locationKey": "mumbai",
@@ -824,10 +824,10 @@
    "Quick reach to the Outer Ring Road"
   ],
   "images": [
-   "assets/projects/mana-dale-01.webp",
-   "assets/projects/mana-dale-02.webp",
-   "assets/projects/mana-dale-03.webp",
-   "assets/projects/mana-dale-04.webp"
+   "/assets/projects/mana-dale-01.webp",
+   "/assets/projects/mana-dale-02.webp",
+   "/assets/projects/mana-dale-03.webp",
+   "/assets/projects/mana-dale-04.webp"
   ],
   "photoDescription": "Twin towers above a landscaped entrance",
   "locationKey": "bengaluru",
@@ -876,14 +876,14 @@
    "Strong connectivity to the airport and IT hubs"
   ],
   "images": [
-   "assets/projects/bhavisha-bilva-01.webp",
-   "assets/projects/bhavisha-bilva-02.webp",
-   "assets/projects/bhavisha-bilva-03.webp",
-   "assets/projects/bhavisha-bilva-04.webp",
-   "assets/projects/bhavisha-bilva-05.webp",
-   "assets/projects/bhavisha-bilva-06.webp",
-   "assets/projects/bhavisha-bilva-07.webp",
-   "assets/projects/bhavisha-bilva-08.webp"
+   "/assets/projects/bhavisha-bilva-01.webp",
+   "/assets/projects/bhavisha-bilva-02.webp",
+   "/assets/projects/bhavisha-bilva-03.webp",
+   "/assets/projects/bhavisha-bilva-04.webp",
+   "/assets/projects/bhavisha-bilva-05.webp",
+   "/assets/projects/bhavisha-bilva-06.webp",
+   "/assets/projects/bhavisha-bilva-07.webp",
+   "/assets/projects/bhavisha-bilva-08.webp"
   ],
   "photoDescription": "Boutique tower above a landscaped entrance",
   "locationKey": "bengaluru",
@@ -931,11 +931,11 @@
    "Near Azim Premji University and DPS"
   ],
   "images": [
-   "assets/projects/ceyone-buildiko-spring-woods-01.webp",
-   "assets/projects/ceyone-buildiko-spring-woods-02.webp",
-   "assets/projects/ceyone-buildiko-spring-woods-03.webp",
-   "assets/projects/ceyone-buildiko-spring-woods-04.webp",
-   "assets/projects/ceyone-buildiko-spring-woods-05.webp"
+   "/assets/projects/ceyone-buildiko-spring-woods-01.webp",
+   "/assets/projects/ceyone-buildiko-spring-woods-02.webp",
+   "/assets/projects/ceyone-buildiko-spring-woods-03.webp",
+   "/assets/projects/ceyone-buildiko-spring-woods-04.webp",
+   "/assets/projects/ceyone-buildiko-spring-woods-05.webp"
   ],
   "photoDescription": "Courtyard villas along a landscaped street",
   "locationKey": "bengaluru",
@@ -983,11 +983,11 @@
    "Quick reach to North Bengaluru tech corridors"
   ],
   "images": [
-   "assets/projects/ceyone-echoes-of-eden-01.webp",
-   "assets/projects/ceyone-echoes-of-eden-02.webp",
-   "assets/projects/ceyone-echoes-of-eden-03.webp",
-   "assets/projects/ceyone-echoes-of-eden-04.webp",
-   "assets/projects/ceyone-echoes-of-eden-05.webp"
+   "/assets/projects/ceyone-echoes-of-eden-01.webp",
+   "/assets/projects/ceyone-echoes-of-eden-02.webp",
+   "/assets/projects/ceyone-echoes-of-eden-03.webp",
+   "/assets/projects/ceyone-echoes-of-eden-04.webp",
+   "/assets/projects/ceyone-echoes-of-eden-05.webp"
   ],
   "photoDescription": "Indo-European courtyard facades",
   "locationKey": "bengaluru",
@@ -1034,11 +1034,11 @@
    "Near Electronic City, Jigani, and Hosur Road"
   ],
   "images": [
-   "assets/projects/ceyone-oxyrich-01.webp",
-   "assets/projects/ceyone-oxyrich-02.webp",
-   "assets/projects/ceyone-oxyrich-03.webp",
-   "assets/projects/ceyone-oxyrich-04.webp",
-   "assets/projects/ceyone-oxyrich-05.webp"
+   "/assets/projects/ceyone-oxyrich-01.webp",
+   "/assets/projects/ceyone-oxyrich-02.webp",
+   "/assets/projects/ceyone-oxyrich-03.webp",
+   "/assets/projects/ceyone-oxyrich-04.webp",
+   "/assets/projects/ceyone-oxyrich-05.webp"
   ],
   "photoDescription": "Mediterranean villa exterior",
   "locationKey": "bengaluru",
@@ -1087,11 +1087,11 @@
    "5 min from the Sarjapur-Attibele main road"
   ],
   "images": [
-   "assets/projects/ceyone-urban-retreat-01.webp",
-   "assets/projects/ceyone-urban-retreat-02.webp",
-   "assets/projects/ceyone-urban-retreat-03.webp",
-   "assets/projects/ceyone-urban-retreat-04.webp",
-   "assets/projects/ceyone-urban-retreat-05.webp"
+   "/assets/projects/ceyone-urban-retreat-01.webp",
+   "/assets/projects/ceyone-urban-retreat-02.webp",
+   "/assets/projects/ceyone-urban-retreat-03.webp",
+   "/assets/projects/ceyone-urban-retreat-04.webp",
+   "/assets/projects/ceyone-urban-retreat-05.webp"
   ],
   "photoDescription": "Contemporary villa with private garden",
   "locationKey": "bengaluru",
@@ -1141,11 +1141,11 @@
    "Quick reach to the Outer Ring Road"
   ],
   "images": [
-   "assets/projects/mana-jardin-01.webp",
-   "assets/projects/mana-jardin-02.webp",
-   "assets/projects/mana-jardin-03.webp",
-   "assets/projects/mana-jardin-04.webp",
-   "assets/projects/mana-jardin-05.webp"
+   "/assets/projects/mana-jardin-01.webp",
+   "/assets/projects/mana-jardin-02.webp",
+   "/assets/projects/mana-jardin-03.webp",
+   "/assets/projects/mana-jardin-04.webp",
+   "/assets/projects/mana-jardin-05.webp"
   ],
   "photoDescription": "Garden towers above a podium landscape",
   "locationKey": "bengaluru",
@@ -1194,11 +1194,11 @@
    "Quick reach to the Outer Ring Road"
   ],
   "images": [
-   "assets/projects/mana-trl-01.webp",
-   "assets/projects/mana-trl-02.webp",
-   "assets/projects/mana-trl-03.webp",
-   "assets/projects/mana-trl-04.webp",
-   "assets/projects/mana-trl-05.webp"
+   "/assets/projects/mana-trl-01.webp",
+   "/assets/projects/mana-trl-02.webp",
+   "/assets/projects/mana-trl-03.webp",
+   "/assets/projects/mana-trl-04.webp",
+   "/assets/projects/mana-trl-05.webp"
   ],
   "photoDescription": "Township towers over a lakeside landscape",
   "locationKey": "bengaluru",
@@ -1248,11 +1248,11 @@
    "Near Nagawara metro and the airport"
   ],
   "images": [
-   "assets/projects/mana-verdant-01.webp",
-   "assets/projects/mana-verdant-02.webp",
-   "assets/projects/mana-verdant-03.webp",
-   "assets/projects/mana-verdant-04.webp",
-   "assets/projects/mana-verdant-05.webp"
+   "/assets/projects/mana-verdant-01.webp",
+   "/assets/projects/mana-verdant-02.webp",
+   "/assets/projects/mana-verdant-03.webp",
+   "/assets/projects/mana-verdant-04.webp",
+   "/assets/projects/mana-verdant-05.webp"
   ],
   "photoDescription": "Tall tower with landscaped balconies",
   "locationKey": "bengaluru",
@@ -1302,11 +1302,11 @@
    "About 16 km to Cochin International Airport"
   ],
   "images": [
-   "assets/projects/prestige-eden-garden-01.webp",
-   "assets/projects/prestige-eden-garden-02.webp",
-   "assets/projects/prestige-eden-garden-03.webp",
-   "assets/projects/prestige-eden-garden-04.webp",
-   "assets/projects/prestige-eden-garden-05.webp"
+   "/assets/projects/prestige-eden-garden-01.webp",
+   "/assets/projects/prestige-eden-garden-02.webp",
+   "/assets/projects/prestige-eden-garden-03.webp",
+   "/assets/projects/prestige-eden-garden-04.webp",
+   "/assets/projects/prestige-eden-garden-05.webp"
   ],
   "photoDescription": "Boutique tower amid Kochi greens",
   "locationKey": "kerala",
@@ -1355,11 +1355,11 @@
    "Tellapur address on Hyderabad’s west corridor"
   ],
   "images": [
-   "assets/projects/prestige-golden-grove-01.webp",
-   "assets/projects/prestige-golden-grove-02.webp",
-   "assets/projects/prestige-golden-grove-03.webp",
-   "assets/projects/prestige-golden-grove-04.webp",
-   "assets/projects/prestige-golden-grove-05.webp"
+   "/assets/projects/prestige-golden-grove-01.webp",
+   "/assets/projects/prestige-golden-grove-02.webp",
+   "/assets/projects/prestige-golden-grove-03.webp",
+   "/assets/projects/prestige-golden-grove-04.webp",
+   "/assets/projects/prestige-golden-grove-05.webp"
   ],
   "photoDescription": "Township skyline over a forested park",
   "locationKey": "hyderabad",
@@ -1410,11 +1410,11 @@
    "About an hour to Calicut International Airport"
   ],
   "images": [
-   "assets/projects/prestige-ocean-pearl-01.webp",
-   "assets/projects/prestige-ocean-pearl-02.webp",
-   "assets/projects/prestige-ocean-pearl-03.webp",
-   "assets/projects/prestige-ocean-pearl-04.webp",
-   "assets/projects/prestige-ocean-pearl-05.webp"
+   "/assets/projects/prestige-ocean-pearl-01.webp",
+   "/assets/projects/prestige-ocean-pearl-02.webp",
+   "/assets/projects/prestige-ocean-pearl-03.webp",
+   "/assets/projects/prestige-ocean-pearl-04.webp",
+   "/assets/projects/prestige-ocean-pearl-05.webp"
   ],
   "photoDescription": "Towers over the Arabian Sea shoreline",
   "locationKey": "kerala",
@@ -1465,11 +1465,11 @@
    "Quick reach to the Outer Ring Road"
   ],
   "images": [
-   "assets/projects/ramky-fortuna-01.webp",
-   "assets/projects/ramky-fortuna-02.webp",
-   "assets/projects/ramky-fortuna-03.webp",
-   "assets/projects/ramky-fortuna-04.webp",
-   "assets/projects/ramky-fortuna-05.webp"
+   "/assets/projects/ramky-fortuna-01.webp",
+   "/assets/projects/ramky-fortuna-02.webp",
+   "/assets/projects/ramky-fortuna-03.webp",
+   "/assets/projects/ramky-fortuna-04.webp",
+   "/assets/projects/ramky-fortuna-05.webp"
   ],
   "photoDescription": "Township entrance with podium gardens",
   "locationKey": "bengaluru",
@@ -1518,11 +1518,11 @@
    "On the Poonamallee High Road and Inner Ring Road axis"
   ],
   "images": [
-   "assets/projects/shriram-codename-kinglife-01.webp",
-   "assets/projects/shriram-codename-kinglife-02.webp",
-   "assets/projects/shriram-codename-kinglife-03.webp",
-   "assets/projects/shriram-codename-kinglife-04.webp",
-   "assets/projects/shriram-codename-kinglife-05.webp"
+   "/assets/projects/shriram-codename-kinglife-01.webp",
+   "/assets/projects/shriram-codename-kinglife-02.webp",
+   "/assets/projects/shriram-codename-kinglife-03.webp",
+   "/assets/projects/shriram-codename-kinglife-04.webp",
+   "/assets/projects/shriram-codename-kinglife-05.webp"
   ],
   "photoDescription": "Boutique high-rise with amenity deck",
   "locationKey": "chennai",
@@ -1572,11 +1572,11 @@
    "Quick access to NH-48"
   ],
   "images": [
-   "assets/projects/sobha-altus-01.webp",
-   "assets/projects/sobha-altus-02.webp",
-   "assets/projects/sobha-altus-03.webp",
-   "assets/projects/sobha-altus-04.webp",
-   "assets/projects/sobha-altus-05.webp"
+   "/assets/projects/sobha-altus-01.webp",
+   "/assets/projects/sobha-altus-02.webp",
+   "/assets/projects/sobha-altus-03.webp",
+   "/assets/projects/sobha-altus-04.webp",
+   "/assets/projects/sobha-altus-05.webp"
   ],
   "photoDescription": "Wave-form towers at dusk",
   "locationKey": "ncr",
@@ -1628,11 +1628,11 @@
    "About 20 km to Ahmedabad airport"
   ],
   "images": [
-   "assets/projects/sobha-elysia-01.webp",
-   "assets/projects/sobha-elysia-02.webp",
-   "assets/projects/sobha-elysia-03.webp",
-   "assets/projects/sobha-elysia-04.webp",
-   "assets/projects/sobha-elysia-05.webp"
+   "/assets/projects/sobha-elysia-01.webp",
+   "/assets/projects/sobha-elysia-02.webp",
+   "/assets/projects/sobha-elysia-03.webp",
+   "/assets/projects/sobha-elysia-04.webp",
+   "/assets/projects/sobha-elysia-05.webp"
   ],
   "photoDescription": "Twin towers on the GIFT City skyline",
   "locationKey": "giftcity",
@@ -1682,11 +1682,11 @@
    "Quick reach to BKC"
   ],
   "images": [
-   "assets/projects/sobha-inizio-01.webp",
-   "assets/projects/sobha-inizio-02.webp",
-   "assets/projects/sobha-inizio-03.webp",
-   "assets/projects/sobha-inizio-04.webp",
-   "assets/projects/sobha-inizio-05.webp"
+   "/assets/projects/sobha-inizio-01.webp",
+   "/assets/projects/sobha-inizio-02.webp",
+   "/assets/projects/sobha-inizio-03.webp",
+   "/assets/projects/sobha-inizio-04.webp",
+   "/assets/projects/sobha-inizio-05.webp"
   ],
   "photoDescription": "Slender tower over central Mumbai",
   "locationKey": "mumbai",
@@ -1740,11 +1740,11 @@
    "About 15 km to Pune airport"
   ],
   "images": [
-   "assets/projects/sobha-nesara-01.webp",
-   "assets/projects/sobha-nesara-02.webp",
-   "assets/projects/sobha-nesara-03.webp",
-   "assets/projects/sobha-nesara-04.webp",
-   "assets/projects/sobha-nesara-05.webp"
+   "/assets/projects/sobha-nesara-01.webp",
+   "/assets/projects/sobha-nesara-02.webp",
+   "/assets/projects/sobha-nesara-03.webp",
+   "/assets/projects/sobha-nesara-04.webp",
+   "/assets/projects/sobha-nesara-05.webp"
   ],
   "photoDescription": "Hillside towers with double-height lobby",
   "locationKey": "pune",
@@ -1793,11 +1793,11 @@
    "Near Prestige Tech Park and Nexus Whitefield"
   ],
   "images": [
-   "assets/projects/sumadhura-edition-01.webp",
-   "assets/projects/sumadhura-edition-02.webp",
-   "assets/projects/sumadhura-edition-03.webp",
-   "assets/projects/sumadhura-edition-04.webp",
-   "assets/projects/sumadhura-edition-05.webp"
+   "/assets/projects/sumadhura-edition-01.webp",
+   "/assets/projects/sumadhura-edition-02.webp",
+   "/assets/projects/sumadhura-edition-03.webp",
+   "/assets/projects/sumadhura-edition-04.webp",
+   "/assets/projects/sumadhura-edition-05.webp"
   ],
   "photoDescription": "Manor-style towers over formal gardens",
   "locationKey": "bengaluru",
@@ -1847,11 +1847,11 @@
    "Asphalted 18 m, 12 m, and 9 m internal roads"
   ],
   "images": [
-   "assets/projects/sumadhura-panorama-01.webp",
-   "assets/projects/sumadhura-panorama-02.webp",
-   "assets/projects/sumadhura-panorama-03.webp",
-   "assets/projects/sumadhura-panorama-04.webp",
-   "assets/projects/sumadhura-panorama-05.webp"
+   "/assets/projects/sumadhura-panorama-01.webp",
+   "/assets/projects/sumadhura-panorama-02.webp",
+   "/assets/projects/sumadhura-panorama-03.webp",
+   "/assets/projects/sumadhura-panorama-04.webp",
+   "/assets/projects/sumadhura-panorama-05.webp"
   ],
   "photoDescription": "Plotted community entrance boulevard",
   "locationKey": "bengaluru",
@@ -1901,11 +1901,11 @@
    "Near ITPL and the Purple Line metro"
   ],
   "images": [
-   "assets/projects/sumadhura-solace-01.webp",
-   "assets/projects/sumadhura-solace-02.webp",
-   "assets/projects/sumadhura-solace-03.webp",
-   "assets/projects/sumadhura-solace-04.webp",
-   "assets/projects/sumadhura-solace-05.webp"
+   "/assets/projects/sumadhura-solace-01.webp",
+   "/assets/projects/sumadhura-solace-02.webp",
+   "/assets/projects/sumadhura-solace-03.webp",
+   "/assets/projects/sumadhura-solace-04.webp",
+   "/assets/projects/sumadhura-solace-05.webp"
   ],
   "photoDescription": "Lakeside towers with classical detailing",
   "locationKey": "bengaluru",
@@ -1954,11 +1954,11 @@
    "About 20-30 min to the airport"
   ],
   "images": [
-   "assets/projects/tvs-emerald-altura-01.webp",
-   "assets/projects/tvs-emerald-altura-02.webp",
-   "assets/projects/tvs-emerald-altura-03.webp",
-   "assets/projects/tvs-emerald-altura-04.webp",
-   "assets/projects/tvs-emerald-altura-05.webp"
+   "/assets/projects/tvs-emerald-altura-01.webp",
+   "/assets/projects/tvs-emerald-altura-02.webp",
+   "/assets/projects/tvs-emerald-altura-03.webp",
+   "/assets/projects/tvs-emerald-altura-04.webp",
+   "/assets/projects/tvs-emerald-altura-05.webp"
   ],
   "photoDescription": "Japandi facades over a podium water body",
   "locationKey": "bengaluru",
@@ -2004,11 +2004,11 @@
    "Emergency response systems in every home"
   ],
   "images": [
-   "assets/projects/tvs-emerald-serene-springs-01.webp",
-   "assets/projects/tvs-emerald-serene-springs-02.webp",
-   "assets/projects/tvs-emerald-serene-springs-03.webp",
-   "assets/projects/tvs-emerald-serene-springs-04.webp",
-   "assets/projects/tvs-emerald-serene-springs-05.webp"
+   "/assets/projects/tvs-emerald-serene-springs-01.webp",
+   "/assets/projects/tvs-emerald-serene-springs-02.webp",
+   "/assets/projects/tvs-emerald-serene-springs-03.webp",
+   "/assets/projects/tvs-emerald-serene-springs-04.webp",
+   "/assets/projects/tvs-emerald-serene-springs-05.webp"
   ],
   "photoDescription": "Low-rise senior community gardens",
   "locationKey": "chennai",
@@ -2057,11 +2057,11 @@
    "Near SIPCOT IT Park"
   ],
   "images": [
-   "assets/projects/tvs-emerald-verde-vista-01.webp",
-   "assets/projects/tvs-emerald-verde-vista-02.webp",
-   "assets/projects/tvs-emerald-verde-vista-03.webp",
-   "assets/projects/tvs-emerald-verde-vista-04.webp",
-   "assets/projects/tvs-emerald-verde-vista-05.webp"
+   "/assets/projects/tvs-emerald-verde-vista-01.webp",
+   "/assets/projects/tvs-emerald-verde-vista-02.webp",
+   "/assets/projects/tvs-emerald-verde-vista-03.webp",
+   "/assets/projects/tvs-emerald-verde-vista-04.webp",
+   "/assets/projects/tvs-emerald-verde-vista-05.webp"
   ],
   "photoDescription": "Low-rise blocks around a green grove",
   "locationKey": "chennai",
@@ -2109,11 +2109,11 @@
    "Quick reach to the ORR"
   ],
   "images": [
-   "assets/projects/vaishnodevi-melange-one-01.webp",
-   "assets/projects/vaishnodevi-melange-one-02.webp",
-   "assets/projects/vaishnodevi-melange-one-03.webp",
-   "assets/projects/vaishnodevi-melange-one-04.webp",
-   "assets/projects/vaishnodevi-melange-one-05.webp"
+   "/assets/projects/vaishnodevi-melange-one-01.webp",
+   "/assets/projects/vaishnodevi-melange-one-02.webp",
+   "/assets/projects/vaishnodevi-melange-one-03.webp",
+   "/assets/projects/vaishnodevi-melange-one-04.webp",
+   "/assets/projects/vaishnodevi-melange-one-05.webp"
   ],
   "photoDescription": "Iconic tower above a gated entrance",
   "locationKey": "bengaluru",
@@ -2160,11 +2160,11 @@
    "Devanahalli, near the Nandi Hills corridor"
   ],
   "images": [
-   "assets/projects/white-lotus-01.webp",
-   "assets/projects/white-lotus-02.webp",
-   "assets/projects/white-lotus-03.webp",
-   "assets/projects/white-lotus-04.webp",
-   "assets/projects/white-lotus-05.webp"
+   "/assets/projects/white-lotus-01.webp",
+   "/assets/projects/white-lotus-02.webp",
+   "/assets/projects/white-lotus-03.webp",
+   "/assets/projects/white-lotus-04.webp",
+   "/assets/projects/white-lotus-05.webp"
   ],
   "photoDescription": "Balinese villas amid tropical gardens",
   "locationKey": "bengaluru",
