@@ -1,5 +1,12 @@
 # Rewrites and redirects
 
+> **This is the `main` branch** — rules for production, `propstarsolution.com`,
+> including the `www` → apex 301. The `beta` branch deliberately omits that one rule
+> (`www.beta.…` is not a thing anyone types) and is otherwise identical. Rules are
+> applied per Amplify branch, so the two never interfere.
+>
+> How non-production branches differ is documented at the end.
+
 `customRules.json` holds the Amplify rewrite/redirect rules. **It is not read at
 build time.** Amplify has no file-based redirect config — `aws-amplify/amplify-hosting`
 issue #18, "Saving rewrites and redirects to configuration file?", has been open
@@ -37,12 +44,15 @@ curl -o /dev/null -w '%{http_code}\n' https://propstarsolution.com/project/does-
 ## Why the www rule has no path
 
 The `www` → apex source is domain-only on purpose. Paths are appended
-automatically, and **a path component in a domain-based source makes Amplify
-ignore the rule without raising an error.**
+automatically, and **a path component in a domain-based source makes Amplify ignore
+the rule without raising an error.**
 
 Also: when you add a custom domain, Amplify creates a default **apex → www**
 redirect — the opposite direction from what we want. Delete it first, or the two
 rules fight.
+
+The `beta` branch carries no www rule at all; that is intentional, not an omission
+to be "fixed" during a merge.
 
 ## Why the five `200` rules exist
 
@@ -74,3 +84,51 @@ Access-Control-Allow-Methods: POST, OPTIONS
 Access-Control-Allow-Headers: Content-Type
 ```
 with a `204` on `OPTIONS`. `api.revspot.ai` is already in the CSP's `connect-src`.
+
+---
+
+## Non-production branches
+
+One environment variable drives all of it — `SITE_ORIGIN` in `amplify.yml`:
+
+```yaml
+env:
+  variables:
+    SITE_ORIGIN: https://beta.propstarsolution.com
+```
+
+`scripts/prerender.js` treats **only** `https://propstarsolution.com` as production.
+Anything else — beta, a PR preview, a typo — gets:
+
+| | production | beta |
+|---|---|---|
+| `<meta name="robots">` | `index,follow,max-image-preview:large` | `noindex,nofollow` |
+| `robots.txt` | `Allow: /` + sitemap | `Disallow: /`, no sitemap line |
+| GA4 tag | present | **removed from the HTML** |
+| canonical / `og:url` | `propstarsolution.com` | `beta.propstarsolution.com` |
+| lead payload `environment` | `production` | `beta` |
+
+The default is deliberately production-safe in the sense that matters: a new branch
+or a mistyped origin is treated as *non*-production, so it gets `noindex` and no
+analytics. The dangerous failure would be the reverse — a staging site quietly
+indexing itself against the real one and splitting its ranking signals.
+
+### Two things to do in the Amplify console for beta
+
+1. **Turn on Access control** (App settings → Access control → Manage access →
+   password-protect the `beta` branch). Amplify's basic auth is per-branch, which is
+   exactly the shape this needs — it is the one case where that limitation is a
+   feature. Belt and braces with `noindex`.
+2. **Do not** connect `beta` to the production GA4 property or submit its sitemap to
+   Search Console. The build already prevents the first; the second is on you.
+
+### Leads from beta
+
+Beta posts to the same endpoint as production, so the whole path is genuinely
+exercised — but every payload carries `"environment": "beta"`. **Filter on that field
+in the CRM**, or beta test submissions will look like real leads.
+
+CORS applies per origin, so `api.revspot.ai` needs
+`https://beta.propstarsolution.com` allowed too — either list both origins or
+reflect any `*.propstarsolution.com`. Until then beta leads queue in `localStorage`
+and flush when it works, same as production.

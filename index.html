@@ -28,7 +28,12 @@
 <!-- /ssg:head -->
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 
+<!-- ssg:analytics -->
 <!-- Google tag (gtag.js) — GA4.
+     scripts/prerender.js REMOVES this whole block on any non-production build, so
+     beta and preview traffic never lands in the production property. track() and
+     trackPageView() are guarded on window.gtag, so everything else still works
+     with the tag absent.
      send_page_view is off on purpose: this is a single-page app, so after the
      first paint every navigation is a pushState that gtag's own autodetection
      handles inconsistently. index.html fires page_view explicitly from the one
@@ -54,6 +59,7 @@
   gtag('js', new Date());
   gtag('config', 'G-DNDDSBZ5VS', { send_page_view: false });
 </script>
+<!-- /ssg:analytics -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
@@ -593,14 +599,16 @@
      The endpoint takes a flat object of key/value pairs: whatever we capture
      goes up as-is, plus the context that tells sales where the lead came from.
 
-     CORS: this is a cross-origin POST and api.revspot.ai must return
-       Access-Control-Allow-Origin: https://propstarsolution.com
+     CORS: this is a cross-origin POST, so api.revspot.ai must return
+       Access-Control-Allow-Origin: <the requesting origin>
        Access-Control-Allow-Methods: POST, OPTIONS
        Access-Control-Allow-Headers: Content-Type
-     and a 204 on OPTIONS. Without those three headers the preflight fails and
-     every lead lands in the retry queue below instead of reaching the CRM.
-     (An Amplify 200-rewrite proxy is NOT a workaround — it mangles POST.
-     See customRules.md.) */
+     and a 204 on OPTIONS. Note this is PER ORIGIN — production
+     (propstarsolution.com) and beta (beta.propstarsolution.com) are different
+     origins, so allow both, or reflect any *.propstarsolution.com. Without
+     those headers the preflight fails and every lead lands in the retry queue
+     below instead of reaching the CRM. (An Amplify 200-rewrite proxy is NOT a
+     workaround — it mangles POST. See customRules.md.) */
   var LEAD_ENDPOINT = 'https://api.revspot.ai/integrations/google/leadgen/listener/c86f5de7-1a0c-4fa2-8266-9b364b772b64';
   var LEAD_QUEUE_KEY = 'propstar_lead_queue';
   var LEAD_QUEUE_MAX = 20;
@@ -613,7 +621,11 @@
       email: lead.email || '',
       source: source,                        /* quiz | contact | enquiry | shortlist */
       page_url: location.href,
-      submitted_at: new Date().toISOString()
+      submitted_at: new Date().toISOString(),
+      /* 'beta' on any non-production build. Without this a test submission from
+         beta.propstarsolution.com is indistinguishable from a real lead once it
+         is in the CRM — filter on it there. */
+      environment: (window.__PS_SITE__ && window.__PS_SITE__.env) || 'production'
     };
     if (project) {
       body.project_id = project.id;

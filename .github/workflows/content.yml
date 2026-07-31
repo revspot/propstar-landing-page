@@ -27,6 +27,8 @@ jobs:
       # Validates every project's city/locality/budget/purpose reference and
       # that each image exists on disk, then prerenders all 45 pages.
       # Exits non-zero on any dangling reference or missing shell marker.
+      # No SITE_ORIGIN: absent means production, which is what this branch is.
+      # The beta branch overrides it and asserts the inverse of the checks below.
       - name: Build content and prerender
         run: node scripts/build-content.js
 
@@ -51,6 +53,21 @@ jobs:
           words=$(sed 's/<[^>]*>/ /g' dist/project/godrej-arden/index.html | wc -w)
           [ "$words" -gt 200 ] || { echo "::error::project page has only $words words"; exit 1; }
           test -f dist/sitemap.xml && test -f dist/robots.txt
+          # production must be indexable, carry the GA4 tag, and canonicalise to
+          # the real origin. These are the exact inverse of the beta branch's
+          # assertions — if a merge ever swaps them, CI says so.
+          grep -q 'index,follow' dist/index.html || { echo "::error::production build is not indexable"; exit 1; }
+          ! grep -q 'noindex' dist/index.html || { echo "::error::production build carries noindex"; exit 1; }
+          grep -q 'Allow: /' dist/robots.txt || { echo "::error::production robots.txt does not allow crawling"; exit 1; }
+          grep -q 'Sitemap:' dist/robots.txt || { echo "::error::production robots.txt has no sitemap"; exit 1; }
+          grep -q 'G-DNDDSBZ5VS' dist/index.html || { echo "::error::GA4 tag missing from production build"; exit 1; }
+          grep -q 'https://propstarsolution.com/' dist/sitemap.xml || { echo "::error::sitemap does not point at the production origin"; exit 1; }
+          # Check the tags that carry an origin, not any mention of the string —
+          # the source comments legitimately name the beta host when explaining
+          # that CORS is per-origin, and a blunt grep flags those.
+          ! grep -rqE '(rel="canonical" href|property="og:url" content|content)="https://beta\.' dist --include='*.html' \
+            || { echo "::error::beta origin in a production canonical/og tag"; exit 1; }
+          ! grep -q 'beta\.propstarsolution\.com' dist/sitemap.xml || { echo "::error::beta origin in the production sitemap"; exit 1; }
           # admin.html must never be publishable
           ! test -e dist/admin.html || { echo "::error::admin.html leaked into dist/"; exit 1; }
           echo "dist OK: $(find dist -type f | wc -l) files"

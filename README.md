@@ -6,6 +6,10 @@ Built per `Propstar_Build_Playbook_v1.2.pdf` (design system, copy rules, "no pri
 
 Deployed on **AWS Amplify Hosting** at https://propstarsolution.com.
 
+There is also a `beta` branch at https://beta.propstarsolution.com. It runs the same
+code with `SITE_ORIGIN` pointed elsewhere, which makes it `noindex`, blocks crawling
+and strips the GA4 tag. See "Deploying" and `customRules.md`.
+
 ## Files
 
 | File | Role |
@@ -45,7 +49,7 @@ content is fetched over HTTP.
 ## How a change reaches the site
 
 ```
-edit at /cms/  →  Sveltia commits to main via the GitHub API
+edit at /cms/  →  Sveltia commits to `main` via the GitHub API
                →  Amplify auto-builds
                →  node scripts/build-content.js validates, regenerates and prerenders
                →  a bad reference fails the build, so the site stays on the last good deploy
@@ -86,10 +90,13 @@ it — a per-surface copy is how one of them quietly stops posting.
 **This needs CORS on `api.revspot.ai` to work from the browser:**
 
 ```
-Access-Control-Allow-Origin: https://propstarsolution.com
+Access-Control-Allow-Origin: https://propstarsolution.com         # and the beta origin
 Access-Control-Allow-Methods: POST, OPTIONS
 Access-Control-Allow-Headers: Content-Type
 ```
+
+CORS is **per origin**, so production and beta both need allowing — list both, or reflect
+any `*.propstarsolution.com`.
 plus `204` on `OPTIONS`. Until those headers exist, every lead fails the preflight and lands in a
 `localStorage` retry queue (`propstar_lead_queue`, capped at 20), which flushes on the next page
 load. Nothing is lost, but nothing is delivered either.
@@ -115,11 +122,12 @@ property termination. Consent Mode v2 defaults to denied for EU/UK/EEA regions o
 
 ## Two consoles
 
-`/cms/` is the one that publishes — it commits to `main` and triggers a deploy.
+`/cms/` is the one that publishes — it commits to `main` and triggers a deploy. The branch it
+writes to is set in `cms/config.yml.template`, and differs on `beta`.
 
 `admin.html` is the older console. Its edits only ever reach the current browser's `localStorage`,
 and its passcode is an unsalted SHA-256 hash sitting in a publicly readable file. It is
-**deliberately excluded from `dist/`**, so it is not reachable in production. Amplify's access
+**deliberately excluded from `dist/`**, so it is not reachable on any deployed branch. Amplify's access
 control is per-branch and cannot protect a single path, so not shipping it *is* the security
 control. Keep it for local JSON export if useful; never publish it.
 
@@ -128,6 +136,11 @@ Sign in to `/cms/` with **"Sign In Using Access Token"** and a GitHub PAT with r
 relay is Netlify's, which this site no longer uses. See `cms/config.yml.template`.
 
 ## Deploying
+
+`SITE_ORIGIN` in `amplify.yml` decides which site is being built. Only
+`https://propstarsolution.com` counts as production; anything else gets `noindex`,
+`Disallow: /` and no analytics tag, so a new branch or a typo fails safe rather than
+indexing a staging site against the real one.
 
 `amplify.yml` and `customHttp.yml` are picked up from the repo. Rewrites are **not** —
 Amplify has no file-based redirect config, so apply `customRules.json` by hand and
