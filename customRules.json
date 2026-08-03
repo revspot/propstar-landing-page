@@ -6,6 +6,72 @@
     "condition": null
   },
   {
+    "source": "/listing",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/sobha-inizio-parel-mumbai",
+    "target": "/project/sobha-inizio/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/capitol-residences",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/prestige-spring-heights-budvel-hyderabad",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/prestige-vaishnaoi-rainbow-waters-raidurg-gachibowli-hyderabad",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/tvs-emerald-cascadia-mission-road-bangalore",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/assetz-mizumi-reserve-kudlu-bangalore",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/phoenix-kessaku-rajajinagar-bangalore",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/godrej/worli",
+    "target": "/properties/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/godrej/worli/thank-you",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/thankyou-capitol",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
     "source": "/properties",
     "target": "/properties/index.html",
     "status": "200",

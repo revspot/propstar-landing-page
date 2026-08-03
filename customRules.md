@@ -2,8 +2,13 @@
 
 > **This is the `main` branch** — rules for production, `propstarsolution.com`,
 > including the `www` → apex 301. The `beta` branch deliberately omits that one rule
-> (`www.beta.…` is not a thing anyone types) and is otherwise identical. Rules are
-> applied per Amplify branch, so the two never interfere.
+> (`www.beta.…` is not a thing anyone types) and is otherwise identical.
+>
+> **Rules are app-level, not per-branch.** Amplify has one "Rewrites and redirects"
+> list for the whole app, shared by every branch — the two branch versions of this
+> file do not each get applied. They coexist only because the `www` rule is
+> *domain*-scoped, so it never fires for a beta host. A **path**-based rule added for
+> one branch would hit every branch. Applying this file is a production action.
 >
 > How non-production branches differ is documented at the end.
 
@@ -53,6 +58,40 @@ rules fight.
 
 The `beta` branch carries no www rule at all; that is intentional, not an omission
 to be "fixed" during a merge.
+
+## The legacy Framer 301s
+
+`propstarsolution.com` ran on Framer before this site. Its sitemap advertised 14 URLs
+and **none of them exist here** except `/privacy` and `/terms` — different slugs, a
+different information architecture. Left alone they all 404 on cutover day, which
+throws away the ranking those URLs already hold and dead-ends anyone following a link
+from Google, a WhatsApp forward or an old ad.
+
+So each one gets an explicit `301`:
+
+| Framer URL | goes to | why |
+|---|---|---|
+| `/sobha-inizio-parel-mumbai` | `/project/sobha-inizio/` | the one project with a real successor |
+| `/listing` | `/properties/` | same intent, new name |
+| `/capitol-residences`, `/prestige-spring-heights-…`, `/prestige-vaishnaoi-…`, `/tvs-emerald-cascadia-…`, `/assetz-mizumi-…`, `/phoenix-kessaku-…` | `/properties/` | not in the 40-project catalogue |
+| `/godrej/worli` | `/properties/` | not in the catalogue |
+| `/thankyou-capitol`, `/godrej/worli/thank-you` | `/` | campaign thank-you pages, nothing to preserve |
+
+They go to `/properties/` rather than `/` because a visitor who clicked a project link
+wants projects. **Not** a wildcard — a blanket `/<*> → /properties/ 301` would turn
+every typo into a redirect and destroy the real `404` above, which is the thing
+Google uses to drop dead URLs from the index.
+
+Re-check them after cutover:
+
+```bash
+for p in /listing /sobha-inizio-parel-mumbai /capitol-residences /godrej/worli; do
+  curl -o /dev/null -w "$p -> %{http_code} %{redirect_url}\n" https://propstarsolution.com$p
+done
+```
+
+Delete a row once Search Console shows no impressions for it — until then it is
+carrying traffic.
 
 ## Why the five `200` rules exist
 
