@@ -2,109 +2,86 @@
   {
     "source": "https://www.propstarsolution.com",
     "target": "https://propstarsolution.com",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/listing",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/sobha-inizio-parel-mumbai",
     "target": "/project/sobha-inizio/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/capitol-residences",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/prestige-spring-heights-budvel-hyderabad",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/prestige-vaishnaoi-rainbow-waters-raidurg-gachibowli-hyderabad",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/tvs-emerald-cascadia-mission-road-bangalore",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/assetz-mizumi-reserve-kudlu-bangalore",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/phoenix-kessaku-rajajinagar-bangalore",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/godrej/worli",
     "target": "/properties/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/godrej/worli/thank-you",
     "target": "/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/thankyou-capitol",
     "target": "/",
-    "status": "301",
-    "condition": null
+    "status": "301"
   },
   {
     "source": "/properties",
     "target": "/properties/index.html",
-    "status": "200",
-    "condition": null
+    "status": "200"
   },
   {
     "source": "/about",
     "target": "/about/index.html",
-    "status": "200",
-    "condition": null
+    "status": "200"
   },
   {
     "source": "/privacy",
     "target": "/privacy/index.html",
-    "status": "200",
-    "condition": null
+    "status": "200"
   },
   {
     "source": "/terms",
     "target": "/terms/index.html",
-    "status": "200",
-    "condition": null
+    "status": "200"
   },
   {
     "source": "/project/<id>",
     "target": "/project/<id>/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/<*>",
-    "target": "/index.html",
-    "status": "404",
-    "condition": null
+    "status": "200"
   }
 ]

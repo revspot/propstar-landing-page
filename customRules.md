@@ -27,24 +27,57 @@ or paste the array into **Hosting → Rewrites and redirects → Open text edito
 It is kept free of comments because AWS's `CustomRule` shape accepts only
 `source`, `target`, `status` and `condition` — any extra key fails validation.
 
-Rules apply **top-down**; the order in the file is the order that matters, and
-the `404` must stay last.
+**`condition` is omitted, not `null`.** The CLI validates it as a string and rejects
+the whole call on `"condition": null`, one error per rule and nothing applied:
 
-## The one rule you must delete
+```
+Invalid type for parameter customRules[0].condition, value: None,
+type: <class 'NoneType'>, valid types: <class 'str'>
+```
 
-**Amplify auto-adds `/<*> → /index.html` with status `200` when it detects a
-single-page app.** That rule is an SEO bug in disguise: every typo, every stale
-link and every crawler probe returns **200 with the home shell** — soft 404s and
-duplicate content across the whole domain, with a green build and no error
-anywhere to tell you.
+The key is optional, so leaving it out is the fix. Do not "restore" it for symmetry —
+that silently breaks the one command in this file.
 
-Ours is a real `404`, not `404-200`. Delete Amplify's version if it appears, and
-re-check after any framework re-detection. Assert it:
+Rules apply **top-down**; the order in the file is the order that matters. The legacy
+`301`s sit above the no-trailing-slash `200` rewrites, and there is deliberately no
+catch-all at the end — see below.
+
+## The catch-all: there must not be one
+
+**Amplify auto-adds `/<*> → /index.html` when it detects a single-page app.** That
+rule is an SEO bug in disguise: every typo, every stale link and every crawler probe
+resolves to the home shell — soft 404s and duplicate content across the whole domain,
+with a green build and nothing anywhere to tell you.
+
+Deleting it is not enough on its own, because the obvious replacement does not work.
+**A custom rule with status `404` is still a redirect.** Amplify's `404` status means
+"redirect to the target when the source is missing" — it does not emit a 404. Measured
+on this app with `/<*> → /index.html` at status `404`:
+
+```
+GET /does-not-exist/   ->  302, location: /index.html
+GET /index.html        ->  200
+```
+
+A crawler sees a 302 into a 200 home page. That is the same soft 404 the auto-added
+rule causes, arrived at by a different route, which is why this file carries **no
+catch-all of any kind**. With no rule matching, Amplify serves its own genuine 404 for
+a missing object, which is exactly the wanted behaviour:
 
 ```bash
-curl -o /dev/null -w '%{http_code}\n' https://propstarsolution.com/project/does-not-exist/
-# must print 404
+for p in /does-not-exist/ /project/nope/ /admin.html /cms/config.yml.template; do
+  curl -o /dev/null -w "$p -> %{http_code}\n" -L https://propstarsolution.com$p
+done
+# all four must print 404
 ```
+
+The cost of having none is that 404s are Amplify's unbranded page rather than ours. A
+branded one would need `/<*> → /404.html` — and every status Amplify offers for that
+either redirects or answers `200`, so it would reintroduce the bug. A real status code
+is worth more than a styled page: it is what makes Google drop a dead URL instead of
+indexing a duplicate home page under it.
+
+Re-check after any framework re-detection — Amplify puts its rule back.
 
 ## Why the www rule has no path
 
