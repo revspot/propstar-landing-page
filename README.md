@@ -147,6 +147,43 @@ Amplify has no file-based redirect config, so apply `customRules.json` by hand a
 **delete Amplify's auto-added SPA catch-all**. `customRules.md` explains why that rule is an SEO
 bug and how to assert it is gone.
 
+### Cutting over to propstarsolution.com
+
+App `d1zwtewdmh1sqp` in `ap-south-1`. Branch `main` is connected and building, and
+`customRules.json` is applied. What is left is the domain, and one thing about it is
+not obvious:
+
+**The hosted zone for propstarsolution.com is in the same AWS account, so attaching
+the domain in Amplify writes the Route 53 records itself.** There is no "attach now,
+point DNS later" — attaching *is* the cutover. That is how `beta` got its ALIAS record.
+Verify on `main.d1zwtewdmh1sqp.amplifyapp.com` first, because the next step is live.
+
+```bash
+aws amplify create-domain-association --app-id d1zwtewdmh1sqp \
+  --domain-name propstarsolution.com \
+  --sub-domain-settings 'prefix=,branchName=main' 'prefix=www,branchName=main'
+```
+
+Then wait for `domainStatus: AVAILABLE` (ACM issuance, ~15–30 min):
+
+```bash
+aws amplify get-domain-association --app-id d1zwtewdmh1sqp \
+  --domain-name propstarsolution.com --query 'domainAssociation.domainStatus'
+```
+
+- The old Framer records are `propstarsolution.com A 31.43.160.6` and
+  `www CNAME sites.framer.app`. **Note them down before starting** — restoring those two
+  is the rollback, and TTL is 300s in both directions.
+- `MX`/`SPF`/`DKIM` for Zoho sit on the apex as different record types, so Amplify's
+  `A`-alias does not disturb them. Email keeps working. Re-check `dig MX` afterwards anyway.
+- Amplify may add its own **apex → www** redirect, the opposite of ours. Check
+  Rewrites and redirects afterwards and remove anything you did not put there.
+- Leave `beta` alone. Its association is separate and unaffected.
+
+After it is live, the whole checklist in `customRules.md` is the acceptance test — the
+404 assertions and the legacy Framer 301s. Then submit
+`https://propstarsolution.com/sitemap.xml` in Search Console.
+
 Watch the running cost: the hero video ladder is roughly 23–30 MB per desktop visit, about
 $4.50 per 1,000 visits in Amplify egress. `customHttp.yml` pins long cache lifetimes on the
 `.mp4` files, which is the single biggest lever. Set a CloudWatch billing alarm.
