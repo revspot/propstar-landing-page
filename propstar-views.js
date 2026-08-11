@@ -372,7 +372,9 @@
       '<p>Our services are meant for adults. We do not knowingly collect information from minors.</p>' +
       '<h2>9. Updates to this policy</h2>' +
       '<p>We may update this policy from time to time. Changes are posted on this page with a revised effective date.</p>' +
-      '<h2>10. Contact us</h2>' +
+      '<h2>10. Partnerships</h2>' +
+      '<p>Propstar Solution ("we," "us," "our") maintains a business partnership with Livspace Home Interior Solution ("Livspace"), pursuant to which certain promotional offers and discounts on select properties are made available exclusively to users through this arrangement. By submitting an enquiry form or otherwise expressing interest in a property in respect of which Livspace is offering a promotion, you expressly consent to the disclosure of your personal information — including but not limited to your name, contact number, email address, and stated property preference — to Livspace, for the limited purpose of enabling Livspace to contact you and extend the applicable offer. Such disclosure shall be limited to properties covered under the Propstar–Livspace partnership and shall not extend to any other property or purpose.</p>' +
+      '<h2>11. Contact us</h2>' +
       '<p>Questions about this policy? <button class="start-over" style="font-size:15px" onclick="App.openContact()">Contact us</button> and we\'ll help.</p>' +
     '</div></section>';
   }
