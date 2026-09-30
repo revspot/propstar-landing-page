@@ -1,0 +1,59 @@
+{
+  "order": 670,
+  "id": "assetz-sora-and-saki",
+  "name": "Assetz Sora & Saki",
+  "developer": "Assetz Property Group",
+  "location": "KIADB Hardware & IT Park, Devanahalli, Bengaluru",
+  "config": "3 & 4 BHK apartments",
+  "sizes": "1,670 – 2,168 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "Seven towers on 11.28 acres",
+    "Inside an IT park",
+    "About 11 km from the airport"
+  ],
+  "description": "A community of seven residential towers on 11.28 acres inside the KIADB Hardware & IT Park near Devanahalli, a park that is home to over 400 companies. Assetz calls it a Carbon Healing Home, with design features it names Sponge Effect, Smart Power, Zero Out, and Climate Capsule.",
+  "curation": [
+    "Homes inside an IT park with over 400 companies",
+    "Integrated retail within the community",
+    "About 11 km from Kempegowda International Airport"
+  ],
+  "amenities": [
+    "Clubhouse",
+    "Swimming pool",
+    "Box cricket",
+    "Futsal court",
+    "Basketball and tennis courts",
+    "Kids' play area",
+    "Party lawn",
+    "Amphitheatre",
+    "25+ amenities"
+  ],
+  "connectivity": [
+    "Kempegowda International Airport, about 11 km",
+    "Yelahanka Township, about 12 km",
+    "Budigere Cross, about 16 km",
+    "Hebbal, about 19 km"
+  ],
+  "developerNote": "Founded in 2006 and headquartered in Bengaluru, Assetz Property Group lists 50+ projects and over 50 million sq.ft of development in its portfolio.",
+  "images": [
+    "/assets/projects/assetz-sora-and-saki-01.webp",
+    "/assets/projects/assetz-sora-and-saki-02.webp",
+    "/assets/projects/assetz-sora-and-saki-03.webp",
+    "/assets/projects/assetz-sora-and-saki-04.webp",
+    "/assets/projects/assetz-sora-and-saki-05.webp",
+    "/assets/projects/assetz-sora-and-saki-06.webp"
+  ],
+  "photoDescription": "Terracotta towers behind a landscaped entrance",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-devanahalli",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
