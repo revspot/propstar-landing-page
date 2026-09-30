@@ -1,0 +1,58 @@
+{
+  "order": 430,
+  "id": "godrej-florenne",
+  "name": "Godrej Florenne",
+  "developer": "Godrej Properties",
+  "location": "Off Soukya Road, Whitefield, Bengaluru",
+  "config": "4 & 5 BHK row houses",
+  "sizes": "3,725 – 5,523 sq.ft",
+  "status": "New launch",
+  "possession": "September 2031",
+  "tags": [
+    "242 row houses",
+    "Hafeez Contractor design",
+    "20 acres"
+  ],
+  "description": "Godrej Florenne is a development of 242 row houses on 20 acres off Soukya Road, about 7 km from Hope Farm Junction. The homes are designed by Hafeez Contractor with French-inspired elevations, and each rises over ground plus three levels with its own lift, courtyard, and terraces.",
+  "curation": [
+    "Low density: 242 row houses across 20 acres",
+    "Every home has a pre-fitted lift, two car parks, and a private open-to-sky courtyard",
+    "A 22,000 sq.ft clubhouse over two levels"
+  ],
+  "amenities": [
+    "Clubhouse (about 22,000 sq.ft)",
+    "Amphitheatre",
+    "Padel court",
+    "Box cricket",
+    "Kids' play area",
+    "Landscaped gazebo",
+    "Nature trail",
+    "Private balconies and terraces"
+  ],
+  "connectivity": [
+    "About 8 mins to Soukya Road",
+    "About 15 mins to Whitefield Railway Station",
+    "About 20 mins to Hope Farm Junction",
+    "About 20 mins to HM Tech Park",
+    "About 26 mins to DPS Whitefield"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-florenne-01.webp",
+    "/assets/projects/godrej-florenne-02.webp",
+    "/assets/projects/godrej-florenne-03.webp",
+    "/assets/projects/godrej-florenne-04.webp",
+    "/assets/projects/godrej-florenne-05.webp",
+    "/assets/projects/godrej-florenne-06.webp"
+  ],
+  "photoDescription": "French-inspired row houses with blue mansard roofs",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-whitefield",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live"
+  ]
+}
