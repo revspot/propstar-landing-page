@@ -1,0 +1,60 @@
+{
+  "order": 560,
+  "id": "brigade-eternia",
+  "name": "Brigade Eternia",
+  "developer": "Brigade Group",
+  "location": "Yelahanka, Bengaluru",
+  "config": "3 & 4 BHK apartments",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "12 towers, 1,124 homes",
+    "Central courtyard",
+    "Clubhouse of about 35,000 sq.ft"
+  ],
+  "description": "A large community of 1,124 apartments across 12 towers in Yelahanka, planned around a central courtyard. A 35,000 sq.ft clubhouse anchors the site, with play areas and cobbled paths through the landscape.",
+  "curation": [
+    "Homes arranged around a central courtyard",
+    "Chrysalis High School 400 m away",
+    "Short drive to Bagmane Sierra and The Galleria Mall"
+  ],
+  "amenities": [
+    "Clubhouse (about 35,000 sq.ft)",
+    "Indoor pool",
+    "Gym",
+    "Badminton and squash courts",
+    "Table tennis",
+    "Indoor games",
+    "Multipurpose hall",
+    "Kids' play area"
+  ],
+  "connectivity": [
+    "Chrysalis High School, 400 m",
+    "Bagmane Sierra, 1.6 km",
+    "The Galleria Mall, 1.6 km",
+    "Phoenix Mall of Asia, 5 km",
+    "Manyata Tech Park, 8.8 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-eternia-01.webp",
+    "/assets/projects/brigade-eternia-02.webp",
+    "/assets/projects/brigade-eternia-03.webp",
+    "/assets/projects/brigade-eternia-04.webp",
+    "/assets/projects/brigade-eternia-05.webp",
+    "/assets/projects/brigade-eternia-06.webp"
+  ],
+  "photoDescription": "Clubhouse building in front of residential towers",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-yelahanka",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
