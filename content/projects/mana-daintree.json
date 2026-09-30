@@ -1,0 +1,60 @@
+{
+  "order": 690,
+  "id": "mana-daintree",
+  "name": "Daintree by Mana",
+  "developer": "Mana Projects",
+  "location": "Sarjapur Road, Bengaluru",
+  "config": "4 BHK villas",
+  "sizes": "",
+  "status": "",
+  "possession": "",
+  "tags": [
+    "150+ villas on 20 acres",
+    "Climate-responsive design",
+    "Rainwater recycling"
+  ],
+  "description": "A villa community of 150+ 4 BHK homes on 20 acres off Sarjapur Road. Mana planned the layout with sun-path and wind-flow simulation, and the homes use insulated cooling tiles and wind-powered turbo ventilators.",
+  "curation": [
+    "A layout planned with sun-path and wind-flow simulation",
+    "Rainwater from roofs and walkways is collected, stored, and treated on site",
+    "About 2.5 km from International School Of Management Excellence"
+  ],
+  "amenities": [
+    "Swimming pool",
+    "Golf putting",
+    "Pickleball court",
+    "Squash court",
+    "Badminton court",
+    "Yoga deck",
+    "Kids' play area",
+    "Outdoor reading pod",
+    "Multipurpose court"
+  ],
+  "connectivity": [
+    "International School Of Management Excellence, about 2.5 km",
+    "Spandana Hospital, about 4.2 km",
+    "D Mart Sarjapura, about 4.3 km",
+    "Centro Mall, about 5.1 km",
+    "Wipro, about 8.6 km"
+  ],
+  "developerNote": "",
+  "images": [
+    "/assets/projects/mana-daintree-01.webp",
+    "/assets/projects/mana-daintree-02.webp",
+    "/assets/projects/mana-daintree-03.webp",
+    "/assets/projects/mana-daintree-05.webp",
+    "/assets/projects/mana-daintree-04.webp",
+    "/assets/projects/mana-daintree-06.webp"
+  ],
+  "photoDescription": "A row of villas with lit facades at dusk",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-sarjapur",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
