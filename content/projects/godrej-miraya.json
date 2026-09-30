@@ -1,0 +1,60 @@
+{
+  "order": 460,
+  "id": "godrej-miraya",
+  "name": "Godrej Miraya",
+  "developer": "Godrej Properties",
+  "location": "Sector 43, Golf Course Road, Gurugram",
+  "config": "4 BHK residences",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "May 2028",
+  "tags": [
+    "248 residences",
+    "5.16 acres",
+    "Glass clubhouse"
+  ],
+  "description": "Godrej Miraya is a low-density development of 248 residences across three towers on 5.16 acres in Sector 43, on Golf Course Road. Homes are open on three sides with no shared walls, and the landscape by STX Singapore is built around reflective pools and lawns.",
+  "curation": [
+    "Low density: 248 homes across three towers on 5.16 acres",
+    "Three-side open homes with no shared walls between units",
+    "The Crystal Club, a glass clubhouse, and a triple-height entrance lobby"
+  ],
+  "amenities": [
+    "The Crystal Club clubhouse",
+    "Reflective pools",
+    "Aqua gym",
+    "Jacuzzi alcove",
+    "Cafe with outdoor seating",
+    "Business centre",
+    "Library",
+    "Mini theatre",
+    "Spa and sauna"
+  ],
+  "connectivity": [
+    "About 400 m to Life Care Health Centre",
+    "About 1 km to the Sector 42-43 Rapid Metro station",
+    "About 1.2 km to South Point Mall",
+    "About 3.2 km to Courtyard by Marriott",
+    "About 20 min drive to IGI Airport"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-miraya-01.webp",
+    "/assets/projects/godrej-miraya-02.webp",
+    "/assets/projects/godrej-miraya-03.webp",
+    "/assets/projects/godrej-miraya-04.webp",
+    "/assets/projects/godrej-miraya-05.webp",
+    "/assets/projects/godrej-miraya-06.webp"
+  ],
+  "photoDescription": "Aerial view of three towers above landscaped grounds",
+  "locationKey": "ncr",
+  "localityKey": "ncr-golfcourse",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
