@@ -1,0 +1,60 @@
+{
+  "order": 450,
+  "id": "godrej-parkshire",
+  "name": "Godrej Parkshire",
+  "developer": "Godrej Properties",
+  "location": "Whitefield-Hoskote corridor, Bengaluru",
+  "config": "2, 3 & 3.5 BHK apartments",
+  "sizes": "1,233 – 1,750 sq.ft",
+  "status": "Under construction",
+  "possession": "November 2030",
+  "tags": [
+    "Greenscape skywalk",
+    "Five activity circles",
+    "7 mins to Old Madras Road"
+  ],
+  "description": "Godrej Parkshire is a high-rise apartment project on the Whitefield-Hoskote corridor, near Old Madras Road. It offers 2, 3, and 3.5 BHK homes, with a landscape built around an elevated greenscape skywalk and five themed activity circles.",
+  "curation": [
+    "An elevated greenscape skywalk winds through the central landscape",
+    "Five themed zones: the Social, Senior, Junior, Evergreen, and Active Circles",
+    "About 7 mins to Old Madras Road and 16 mins to Hoskote Industrial Area"
+  ],
+  "amenities": [
+    "Swimming pool",
+    "Tennis and futsal court",
+    "Beach volleyball court",
+    "Greenscape skywalk",
+    "Nature work pod",
+    "The Social Circle",
+    "The Senior Circle",
+    "The Junior Circle",
+    "The Active Circle"
+  ],
+  "connectivity": [
+    "About 7 mins to Old Madras Road",
+    "About 8 mins to Delhi Public School",
+    "About 12 mins to Orion Uptown Mall",
+    "About 22 mins to Whitefield Metro Station",
+    "About 40 mins to Kempegowda International Airport"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-parkshire-01.webp",
+    "/assets/projects/godrej-parkshire-02.webp",
+    "/assets/projects/godrej-parkshire-03.webp",
+    "/assets/projects/godrej-parkshire-04.webp",
+    "/assets/projects/godrej-parkshire-05.webp",
+    "/assets/projects/godrej-parkshire-06.webp"
+  ],
+  "photoDescription": "Two residential towers at dusk beside a landscaped road",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-whitefield",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
