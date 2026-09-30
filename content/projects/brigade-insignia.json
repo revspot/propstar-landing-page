@@ -1,0 +1,61 @@
+{
+  "order": 570,
+  "id": "brigade-insignia",
+  "name": "Brigade Insignia",
+  "developer": "Brigade Group",
+  "location": "Yelahanka, Bengaluru",
+  "config": "3 bed residences and 3, 4 & 5 BHK sky mansions",
+  "sizes": "2,145 – 5,827 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "Six towers on about 5.9 acres",
+    "Sky gardens",
+    "On the airport road"
+  ],
+  "description": "Six towers on about 5.9 acres along the airport road in Yelahanka, with 3 bed residences and larger sky mansions. The plan keeps a heritage tree plaza and adds sky gardens to the homes.",
+  "curation": [
+    "Choice of 3 bed residences or 3 to 5 BHK sky mansions",
+    "Heritage tree plaza kept within the landscape",
+    "Northgate Office Park 700 m away"
+  ],
+  "amenities": [
+    "Pool and kids' pool",
+    "Amphitheatre",
+    "Heritage tree plaza",
+    "Sky gardens",
+    "Skating rink",
+    "Pickleball and squash courts",
+    "Multi-game court",
+    "Banquet hall",
+    "AV room"
+  ],
+  "connectivity": [
+    "Northgate Office Park, 700 m",
+    "Sattva Horizon, 1.6 km",
+    "Canadian International School, 2.1 km",
+    "Phoenix Mall of Asia, 5.2 km",
+    "Aster CMI Hospital, 7 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-insignia-01.webp",
+    "/assets/projects/brigade-insignia-02.webp",
+    "/assets/projects/brigade-insignia-03.webp",
+    "/assets/projects/brigade-insignia-04.webp",
+    "/assets/projects/brigade-insignia-05.webp",
+    "/assets/projects/brigade-insignia-06.webp"
+  ],
+  "photoDescription": "Residential towers with landscaped grounds",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-yelahanka",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2",
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
