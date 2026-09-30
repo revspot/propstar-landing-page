@@ -1,0 +1,60 @@
+{
+  "order": 550,
+  "id": "brigade-avalon",
+  "name": "Brigade Avalon",
+  "developer": "Brigade Group",
+  "location": "Whitefield, Bengaluru",
+  "config": "3.5 & 4 BHK apartments",
+  "sizes": "2,765 – 3,862 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "206 homes on about 4.4 acres",
+    "About 80% open space",
+    "On Whitefield Main Road"
+  ],
+  "description": "A low-density project of 206 apartments in three towers on Whitefield Main Road, with about 80% of the site kept as open space. Homes are 3.5 and 4 BHK layouts, served by a 25,000 sq.ft clubhouse.",
+  "curation": [
+    "Only 206 homes across three towers of 15 floors",
+    "About 80% of the land left as open space",
+    "Walkable to Nexus Mall and a Manipal hospital on Varthur Road"
+  ],
+  "amenities": [
+    "Clubhouse (about 25,000 sq.ft)",
+    "Temperature-controlled pool",
+    "Golf simulator",
+    "Squash and badminton courts",
+    "Mini theatre",
+    "Banquet hall",
+    "Gym and aerobics",
+    "Party terrace",
+    "Pet park"
+  ],
+  "connectivity": [
+    "Nexus Mall, 0.7 km",
+    "Manipal Hospital, Varthur Road, 0.9 km",
+    "Sigma Tech Park, 1.3 km",
+    "Channasandra Metro, 2.6 km",
+    "ITPL, 3.9 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-avalon-01.webp",
+    "/assets/projects/brigade-avalon-02.webp",
+    "/assets/projects/brigade-avalon-03.webp",
+    "/assets/projects/brigade-avalon-04.webp",
+    "/assets/projects/brigade-avalon-05.webp",
+    "/assets/projects/brigade-avalon-06.webp"
+  ],
+  "photoDescription": "Residential towers above a landscaped drive",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-whitefield",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
