@@ -1,0 +1,61 @@
+{
+  "order": 680,
+  "id": "assetz-muse-and-maison",
+  "name": "Assetz Muse & Maison",
+  "developer": "Assetz Property Group",
+  "location": "Gattahalli, off Hosa Road, Bengaluru",
+  "config": "3 BHK apartments",
+  "sizes": "1,877 – 1,930 sq.ft",
+  "status": "New launch",
+  "possession": "",
+  "tags": [
+    "Single tower, 128 homes",
+    "78% open space",
+    "Hosa Road Metro, about 5 mins"
+  ],
+  "description": "A single-tower project of 128 3 BHK homes on about 2 acres at Gattahalli, off Hosa Road, with 78% of the site left open. The design uses terracotta jaalis, and homes have terrace balconies of up to 12' x 8'.",
+  "curation": [
+    "A small community of 128 homes in one tower",
+    "Terrace balconies of up to 12' x 8'",
+    "About 5 mins from Hosa Road Metro and 15 mins from Electronic City"
+  ],
+  "amenities": [
+    "About 13,000 sq.ft clubhouse",
+    "Temperature-controlled pool",
+    "Padel and pickleball courts",
+    "Gym",
+    "Yoga deck",
+    "Library",
+    "Co-working space",
+    "Flea market space",
+    "20+ amenities"
+  ],
+  "connectivity": [
+    "Hosa Road Metro, about 5 mins",
+    "NICE Road Junction, about 10 mins",
+    "Electronic City, about 15 mins",
+    "HSR Layout, about 18 mins",
+    "Koramangala, about 22 mins"
+  ],
+  "developerNote": "Founded in 2006 and headquartered in Bengaluru, Assetz Property Group lists 50+ projects and over 50 million sq.ft of development in its portfolio.",
+  "images": [
+    "/assets/projects/assetz-muse-and-maison-01.webp",
+    "/assets/projects/assetz-muse-and-maison-02.webp",
+    "/assets/projects/assetz-muse-and-maison-03.webp",
+    "/assets/projects/assetz-muse-and-maison-04.webp",
+    "/assets/projects/assetz-muse-and-maison-06.webp",
+    "/assets/projects/assetz-muse-and-maison-05.webp"
+  ],
+  "photoDescription": "Single residential tower above a tree-lined street",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-sarjapur",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
