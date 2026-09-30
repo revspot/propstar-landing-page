@@ -1,0 +1,59 @@
+{
+  "order": 580,
+  "id": "brigade-valencia",
+  "name": "Brigade Valencia",
+  "developer": "Brigade Group",
+  "location": "Hosur Road, Bengaluru",
+  "config": "4 BHK apartments",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "24-acre community",
+    "About 85% open space",
+    "Near Bommasandra Metro"
+  ],
+  "description": "A 24-acre Spanish-style community on Hosur Road near Electronic City, with about 85% of the land kept open and more than 35 amenities. The current phase, Brillio, offers 4 BHK apartments.",
+  "curation": [
+    "Large 24-acre site with about 85% open space",
+    "Short drive to Bommasandra Metro",
+    "Narayana Hrudayalaya and Mazumdar Shaw Medical Centre nearby"
+  ],
+  "amenities": [
+    "Swimming pool and kids' pool",
+    "Gym and aerobics",
+    "Yoga",
+    "Squash and badminton courts",
+    "Billiards",
+    "Table tennis",
+    "Co-working space",
+    "Cafe"
+  ],
+  "connectivity": [
+    "Short drive to Bommasandra Metro",
+    "Mazumdar Shaw Medical Centre, 650 m",
+    "Narayana Hrudayalaya, 1 km",
+    "DMart, 2 km",
+    "Decathlon, 2.3 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-valencia-01.webp",
+    "/assets/projects/brigade-valencia-02.webp",
+    "/assets/projects/brigade-valencia-03.webp",
+    "/assets/projects/brigade-valencia-04.webp",
+    "/assets/projects/brigade-valencia-05.webp",
+    "/assets/projects/brigade-valencia-06.webp"
+  ],
+  "photoDescription": "Residential towers against a clear sky",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-chandapura",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
