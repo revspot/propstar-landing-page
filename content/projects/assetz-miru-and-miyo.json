@@ -1,0 +1,60 @@
+{
+  "order": 660,
+  "id": "assetz-miru-and-miyo",
+  "name": "Assetz Miru & Miyo",
+  "developer": "Assetz Property Group",
+  "location": "Yelahanka, Bengaluru",
+  "config": "3 BHK apartments",
+  "sizes": "1,898 – 1,926 sq.ft",
+  "status": "New launch",
+  "possession": "",
+  "tags": [
+    "About 77% open space",
+    "Sunken central courtyard",
+    "12+ sports facilities"
+  ],
+  "description": "A 3 BHK-only community of 350 homes on about 6 acres in Yelahanka, with about 77% of the site kept open. The plan centres on a sunken courtyard with an amphitheatre, and the architecture uses terracotta accents.",
+  "curation": [
+    "Only 350 homes on about 6 acres, all 3 BHK",
+    "A sunken central courtyard with an amphitheatre",
+    "About a minute from Orchids The International School"
+  ],
+  "amenities": [
+    "About 23,000 sq.ft of clubhouse space",
+    "Temperature-controlled pool",
+    "Padel and pickleball courts",
+    "Tennis, basketball, and badminton courts",
+    "Gym and steam room",
+    "Yoga room",
+    "Co-working space",
+    "Crèche",
+    "Pets' park",
+    "30+ amenities"
+  ],
+  "connectivity": [
+    "Orchids The International School, about 1 min",
+    "Upcoming Blue Line Metro, about 12 mins",
+    "Yelahanka Railway Junction, about 23 mins",
+    "Kempegowda International Airport, about 31 mins",
+    "Manyata Tech Park, about 40 mins"
+  ],
+  "developerNote": "Founded in 2006 and headquartered in Bengaluru, Assetz Property Group lists 50+ projects and over 50 million sq.ft of development in its portfolio.",
+  "images": [
+    "/assets/projects/assetz-miru-and-miyo-01.webp",
+    "/assets/projects/assetz-miru-and-miyo-02.webp",
+    "/assets/projects/assetz-miru-and-miyo-03.webp",
+    "/assets/projects/assetz-miru-and-miyo-04.webp"
+  ],
+  "photoDescription": "Dark-toned tower above a landscaped courtyard at dusk",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-yelahanka",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
