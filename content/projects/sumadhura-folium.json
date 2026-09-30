@@ -1,0 +1,61 @@
+{
+  "order": 650,
+  "id": "sumadhura-folium",
+  "name": "Sumadhura Folium",
+  "developer": "Sumadhura Infra",
+  "location": "Whitefield, Bengaluru",
+  "config": "3, 3.5 & 4 BHK apartments",
+  "sizes": "1,660 – 2,435 sq.ft",
+  "status": "Under construction",
+  "possession": "March 2028",
+  "tags": [
+    "Seven towers on 16.5 acres",
+    "54,000 sq.ft Club Sumadhura",
+    "Beside Sheelavanthakere Lake"
+  ],
+  "description": "A 16.5-acre community of seven towers near Palm Meadows in Whitefield, beside Sheelavanthakere Lake, built in four phases. The current phase, Elm and Oak, has 280 4 BHK homes, and residents share Club Sumadhura, a 54,000 sq.ft clubhouse over four floors.",
+  "curation": [
+    "A lakeside setting beside Sheelavanthakere Lake",
+    "Club Sumadhura hosts academies including Michael Phelps Swimming, Saurav Ghosal Squash, and Mahesh Bhupathi Tennis",
+    "About 10 mins from ITPL, ITPB, and EPIP"
+  ],
+  "amenities": [
+    "54,000 sq.ft clubhouse",
+    "Half Olympic-size and lagoon pools",
+    "Golf simulator and mini golf",
+    "Co-working studio",
+    "Mini theatre",
+    "Spa and yoga studio",
+    "Amphitheatre",
+    "Crèche",
+    "Pet park",
+    "120+ amenities"
+  ],
+  "connectivity": [
+    "Sri Sathya Sai Super Speciality Hospital, about 5 mins",
+    "Forum Neighbourhood Mall, about 6 mins",
+    "Nallurhalli Metro, about 8 mins",
+    "ITPL, ITPB, and EPIP, about 10 mins"
+  ],
+  "developerNote": "",
+  "images": [
+    "/assets/projects/sumadhura-folium-01.webp",
+    "/assets/projects/sumadhura-folium-02.webp",
+    "/assets/projects/sumadhura-folium-03.webp",
+    "/assets/projects/sumadhura-folium-04.webp",
+    "/assets/projects/sumadhura-folium-05.webp",
+    "/assets/projects/sumadhura-folium-06.webp"
+  ],
+  "photoDescription": "White towers against an evening sky",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-whitefield",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
