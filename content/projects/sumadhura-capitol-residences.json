@@ -1,0 +1,62 @@
+{
+  "order": 640,
+  "id": "sumadhura-capitol-residences",
+  "name": "Sumadhura Capitol Residences",
+  "developer": "Sumadhura Infra",
+  "location": "Hope Farm Junction, Whitefield, Bengaluru",
+  "config": "3 & 4 BHK apartments",
+  "sizes": "1,635 – 2,150 sq.ft",
+  "status": "Under construction",
+  "possession": "December 2027",
+  "tags": [
+    "Metro about 180 m away",
+    "Vehicle-free podium",
+    "IGBC Platinum pre-certified"
+  ],
+  "description": "A community of 405 homes in four towers on 4.1 acres at Hope Farm Junction in Whitefield, about 180 m from Kadugodi Tree Park Metro. The podium is vehicle-free, the towers are placed so that none faces another, and about 77% of the site is open space.",
+  "curation": [
+    "About a three-minute walk to Kadugodi Tree Park Metro",
+    "A vehicle-free podium, with no tower facing another",
+    "Mivan construction, Vastu-compliant plans, and IGBC Platinum pre-certification"
+  ],
+  "amenities": [
+    "22,000 sq.ft clubhouse",
+    "Swimming pool",
+    "Basketball and badminton courts",
+    "Skating rink",
+    "Jogging track",
+    "Butterfly garden",
+    "Pet park",
+    "Outdoor gym",
+    "Party lawn",
+    "40+ amenities"
+  ],
+  "connectivity": [
+    "Kadugodi Tree Park Metro, about 180 m",
+    "ITPL, about 2 km",
+    "Park Square Mall, about 3 mins",
+    "Aster Hospital, about 4 mins",
+    "Nexus Whitefield, about 10 mins"
+  ],
+  "developerNote": "",
+  "images": [
+    "/assets/projects/sumadhura-capitol-residences-01.webp",
+    "/assets/projects/sumadhura-capitol-residences-02.webp",
+    "/assets/projects/sumadhura-capitol-residences-03.webp",
+    "/assets/projects/sumadhura-capitol-residences-04.webp",
+    "/assets/projects/sumadhura-capitol-residences-05.webp",
+    "/assets/projects/sumadhura-capitol-residences-06.webp"
+  ],
+  "photoDescription": "Balconied towers above a landscaped garden",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-whitefield",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
