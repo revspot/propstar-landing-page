@@ -1,0 +1,62 @@
+{
+  "order": 410,
+  "id": "godrej-regent-park",
+  "name": "Godrej Regent Park",
+  "developer": "Godrej Properties",
+  "location": "Sarjapur Road, Bengaluru",
+  "config": "2 & 3 BHK apartments",
+  "sizes": "1,240 – 1,868 sq.ft",
+  "status": "New launch",
+  "possession": "July 2031",
+  "tags": [
+    "Victorian-inspired design",
+    "32 amenity zones",
+    "Near Wipro Sarjapur campus"
+  ],
+  "description": "Godrej Regent Park is a new-launch development of 2 & 3 BHK apartments in Kada Agrahara, off Sarjapur Road, designed with Victorian-inspired architecture. The master plan sets two towers around 32 amenity zones, a short drive from the Wipro Sarjapur campus and the Outer Ring Road.",
+  "curation": [
+    "Victorian-inspired architecture with arched arcades and formal landscaped gardens",
+    "About 10 minutes to the Wipro Sarjapur campus and 12 to RGA Tech Park",
+    "DMart Sarjapur within walking distance, and Azim Premji University about 5 minutes away"
+  ],
+  "amenities": [
+    "Clubhouse",
+    "Swimming pool",
+    "Amphitheatre",
+    "Wellness garden",
+    "Box cricket",
+    "Golf putting",
+    "Skating rink",
+    "Barbecue area",
+    "Kids' play area",
+    "Yoga deck",
+    "Jogging track"
+  ],
+  "connectivity": [
+    "Wipro Sarjapur campus about 10 minutes",
+    "RGA Tech Park about 12 minutes",
+    "Outer Ring Road about 5 to 10 minutes",
+    "Azim Premji University about 5 minutes",
+    "DMart Sarjapur within walking distance"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-regent-park-01.webp",
+    "/assets/projects/godrej-regent-park-02.webp",
+    "/assets/projects/godrej-regent-park-03.webp",
+    "/assets/projects/godrej-regent-park-04.webp",
+    "/assets/projects/godrej-regent-park-05.webp",
+    "/assets/projects/godrej-regent-park-06.webp"
+  ],
+  "photoDescription": "Twin residential towers rising above landscaped greens",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-sarjapur",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
