@@ -1,0 +1,60 @@
+{
+  "order": 470,
+  "id": "godrej-sora",
+  "name": "Godrej Sora",
+  "developer": "Godrej Properties",
+  "location": "Sector 53, Golf Course Road, Gurugram",
+  "config": "3 & 4 BHK residences",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "September 2032",
+  "tags": [
+    "244 residences",
+    "2 homes per core",
+    "Japanese-inspired design"
+  ],
+  "description": "Godrej Sora is a development of 244 residences across four towers in Sector 53, steps from Golf Course Road, designed around Japanese Shibui aesthetics. Architecture is by Hafeez Contractor with landscape by Oracles, and each tower has two homes per core, private lift lobbies, and balconies of about 50 ft.",
+  "curation": [
+    "Only two homes per core per tower, with private lift lobbies",
+    "Balconies of about 50 ft and 3.4 m floor-to-floor heights",
+    "The Shiki Clubhouse with an indoor onsen-inspired pool and a rooftop pool"
+  ],
+  "amenities": [
+    "The Shiki Clubhouse",
+    "Indoor onsen-inspired pool",
+    "Outdoor rooftop pool",
+    "Spa",
+    "Squash court",
+    "Badminton and multipurpose hall",
+    "Gym",
+    "Sunken seating area",
+    "Triple-height tower lobbies"
+  ],
+  "connectivity": [
+    "Steps from Golf Course Road",
+    "About 2.4 km to Central Plaza Mall",
+    "About 2.6 km to Heritage Xperiential School",
+    "About 3.5 km to Paras Hospital",
+    "Access to the Rapid Metro and NH48"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/amenity-1.webp",
+    "/assets/projects/gallery-4.webp",
+    "/assets/projects/gallery-3.webp",
+    "/assets/projects/gallery-5.webp",
+    "/assets/projects/gallery-7.webp",
+    "/assets/projects/gallery-9.webp"
+  ],
+  "photoDescription": "Front elevation of the towers above a landscaped podium",
+  "locationKey": "ncr",
+  "localityKey": "ncr-golfcourse",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
