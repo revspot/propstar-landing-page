@@ -1,0 +1,59 @@
+{
+  "order": 440,
+  "id": "godrej-lakeside-orchard",
+  "name": "Godrej Lakeside Orchard",
+  "developer": "Godrej Properties",
+  "location": "Sarjapur Road, Bengaluru",
+  "config": "3, 3.5 & 4+ BHK apartments",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "August 2030",
+  "tags": [
+    "6 acres of greens",
+    "700+ trees",
+    "40+ amenities"
+  ],
+  "description": "Godrej Lakeside Orchard is a residential project off Sarjapur Road in Kodathi village, planned around water and about 6 acres of greens. It offers 3, 3.5, and 4+ BHK homes with a clubhouse, a pool, and more than 40 amenities.",
+  "curation": [
+    "About 6 acres of landscaped greens with 700+ trees",
+    "A clubhouse set beside the main pool",
+    "Close to RGA Tech Park, Market Square Mall, and Manipal Hospital"
+  ],
+  "amenities": [
+    "Clubhouse",
+    "Swimming pool",
+    "Amphitheatre",
+    "Butterfly garden",
+    "Skating area",
+    "Tennis court",
+    "Star-gazing area",
+    "Active and social retreat zones"
+  ],
+  "connectivity": [
+    "Near RGA Tech Park",
+    "On Sarjapur Main Road",
+    "Close to Primus Public School",
+    "Near Market Square Mall",
+    "Near Manipal Hospital"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-lakeside-orchard-01.webp",
+    "/assets/projects/godrej-lakeside-orchard-02.webp",
+    "/assets/projects/godrej-lakeside-orchard-03.webp",
+    "/assets/projects/godrej-lakeside-orchard-04.webp",
+    "/assets/projects/godrej-lakeside-orchard-05.webp"
+  ],
+  "photoDescription": "Clubhouse beside a pool at dusk",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-sarjapur",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
