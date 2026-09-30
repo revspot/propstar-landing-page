@@ -1,0 +1,59 @@
+{
+  "order": 590,
+  "id": "brigade-altius",
+  "name": "Brigade Altius",
+  "developer": "Brigade Group",
+  "location": "Sholinganallur, Chennai",
+  "config": "3 & 4 bed and duplex homes",
+  "sizes": "1,726 – 5,054 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "Three 43-storey towers",
+    "Skybridge between towers",
+    "Next to Sholinganallur Metro"
+  ],
+  "description": "Three 43-storey towers on OMR at Sholinganallur, about 143 m tall and linked by a skybridge, with 662 homes on 6.5 acres. Homes have no shared walls, and a 50,000 sq.ft clubhouse sits at podium level.",
+  "curation": [
+    "Towers joined by a skybridge at height",
+    "No shared walls between homes",
+    "Beside the upcoming Sholinganallur Metro station on OMR"
+  ],
+  "amenities": [
+    "Podium clubhouse (about 50,000 sq.ft)",
+    "Gym",
+    "Badminton and squash courts",
+    "Futsal",
+    "Billiards",
+    "AV room",
+    "Banquet hall",
+    "Pet park"
+  ],
+  "connectivity": [
+    "Next to the upcoming Sholinganallur Metro station",
+    "On OMR, with links to ECR",
+    "Close to SIPCOT IT Park and ELCOT SEZ",
+    "Sathyabama University nearby"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-altius-01.webp",
+    "/assets/projects/brigade-altius-02.webp",
+    "/assets/projects/brigade-altius-03.webp",
+    "/assets/projects/brigade-altius-04.webp",
+    "/assets/projects/brigade-altius-05.webp",
+    "/assets/projects/brigade-altius-06.webp"
+  ],
+  "photoDescription": "Three tall towers joined by a skybridge",
+  "locationKey": "chennai",
+  "localityKey": "che-omr",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1",
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
