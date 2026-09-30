@@ -1,0 +1,61 @@
+{
+  "order": 700,
+  "id": "mana-vista",
+  "name": "Mana Vista",
+  "developer": "Mana Projects",
+  "location": "Gattahalli, off Sarjapur Road, Bengaluru",
+  "config": "3 BHK apartments",
+  "sizes": "895 – 998 sq.ft carpet",
+  "status": "",
+  "possession": "",
+  "tags": [
+    "440 homes on 6 acres",
+    "Stepped terraces",
+    "40+ amenities"
+  ],
+  "description": "A community of 440 3 BHK homes on 6 acres at Gattahalli, off Sarjapur Road, planned around a central park with tree-lined pathways. The homes are Vastu-aligned, and the towers step back in terraces.",
+  "curation": [
+    "A park-centric masterplan with tree-lined pathways",
+    "Vastu-aligned homes with stepped terraces",
+    "About 5.7 km from Wipro Corporate Office and 5.8 km from RGA Tech Park"
+  ],
+  "amenities": [
+    "Clubhouse with cafe",
+    "Infinity pool and kids' pool",
+    "Gym",
+    "Basketball and football courts",
+    "Cricket net",
+    "Amphitheatre",
+    "Jogging track",
+    "Yoga deck with pergola",
+    "Elders' park",
+    "Bonfire pit"
+  ],
+  "connectivity": [
+    "National Public School, about 2.8 km",
+    "Wipro Corporate Office, about 5.7 km",
+    "RGA Tech Park, about 5.8 km",
+    "Market Square Mall, about 6.5 km",
+    "RMZ Ecoworld, about 7.3 km"
+  ],
+  "developerNote": "",
+  "images": [
+    "/assets/projects/mana-vista-01.webp",
+    "/assets/projects/mana-vista-02.webp",
+    "/assets/projects/mana-vista-03.webp",
+    "/assets/projects/mana-vista-04.webp",
+    "/assets/projects/mana-vista-05.webp",
+    "/assets/projects/mana-vista-06.webp"
+  ],
+  "photoDescription": "Towers and an angular clubhouse beside the entrance road",
+  "locationKey": "bengaluru",
+  "localityKey": "blr-sarjapur",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
