@@ -1,0 +1,61 @@
+{
+  "order": 490,
+  "id": "godrej-bliss",
+  "name": "Godrej Bliss",
+  "developer": "Godrej Properties",
+  "location": "Kandivali East, Mumbai",
+  "config": "2 & 3 BHK apartments",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "November 2029",
+  "tags": [
+    "40+ amenities on three levels",
+    "Deck in every home",
+    "7 min to Akurli Metro"
+  ],
+  "description": "Godrej Bliss is a high-rise residential development in Kandivali East, Mumbai, developed by Shivam Developers with Godrej Properties as development manager. It offers 2 & 3 BHK homes with decks, and 40+ amenities spread across ground, podium, and rooftop levels.",
+  "curation": [
+    "Amenities arranged over three levels: Ground Greens, an Active Podium, and a Rooftop Rejuvenation level with the Skyscape gym",
+    "About 1.5 acres of open green space across the combined Godrej Bliss and Godrej Nest layout",
+    "Godrej Properties is the development manager and Shivam Developers is the developer of record, which is worth noting during due diligence"
+  ],
+  "amenities": [
+    "Swimming pool",
+    "Skyscape gym",
+    "Box cricket and multipurpose pitch",
+    "Squash court",
+    "Rooftop viewing deck",
+    "Rooftop party lawn",
+    "Pet garden",
+    "Barbeque corner",
+    "Kids’ play area",
+    "Guest room"
+  ],
+  "connectivity": [
+    "7 min drive to the Western Express Highway",
+    "7 min drive to Akurli Metro station",
+    "10 min drive to Kandivali railway station",
+    "6 min drive to Lokhandwala Foundation School",
+    "4 min to Apex Hospital"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-bliss-01.webp",
+    "/assets/projects/godrej-bliss-02.webp",
+    "/assets/projects/godrej-bliss-03.webp",
+    "/assets/projects/godrej-bliss-04.webp",
+    "/assets/projects/godrej-bliss-05.webp",
+    "/assets/projects/godrej-bliss-06.webp"
+  ],
+  "photoDescription": "High-rise towers framed by trees at sunset",
+  "locationKey": "mumbai",
+  "localityKey": "mum-kandivali",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
