@@ -1,0 +1,62 @@
+{
+  "order": 530,
+  "id": "vajra-west-city",
+  "name": "Vajra West City",
+  "developer": "Vajra Infra Projects LLP",
+  "location": "Osman Nagar, Hyderabad",
+  "config": "2.5 & 3 BHK apartments",
+  "sizes": "1,420 – 2,030 sq.ft",
+  "status": "Under construction",
+  "possession": "June 2029",
+  "tags": [
+    "Unrestricted ORR views",
+    "2,00,000 sq.ft of amenities",
+    "Near the Financial District"
+  ],
+  "description": "A 13-acre community of six towers on the Nehru Outer Ring Road at Osman Nagar, with 2.5 and 3 BHK homes. About 2,00,000 sq.ft of amenities include a G+6 clubhouse, a 175 ft infinity pool, and a 50 m wide forest trail.",
+  "curation": [
+    "Towers sit right beside the Outer Ring Road, with unrestricted views across it",
+    "A G+6 clubhouse with four banquet halls, 11 guest suites, and a co-working space",
+    "About 78% of the site is open space, and the layouts are Vastu compliant"
+  ],
+  "amenities": [
+    "G+6 clubhouse",
+    "175 ft infinity pool",
+    "50 m wide forest trail",
+    "Elevated tennis court",
+    "Four banquet halls",
+    "11 guest suites",
+    "Co-working space with huddle rooms",
+    "Cricket practice turf",
+    "Sri Venkateshwara Swamy temple",
+    "EV charging points for residences"
+  ],
+  "connectivity": [
+    "About 7 min to ORR Exit 2",
+    "About 12 min to Neopolis",
+    "About 15 min to the Financial District",
+    "About 6 min to Birla Open Minds International School",
+    "About 33 min to Rajiv Gandhi International Airport"
+  ],
+  "developerNote": "Vajra Infra has been building homes in West Hyderabad for over 15 years, with residential projects in Tellapur and Osman Nagar close to the Outer Ring Road.",
+  "images": [
+    "/assets/projects/vajra-west-city-01.webp",
+    "/assets/projects/vajra-west-city-02.webp",
+    "/assets/projects/vajra-west-city-03.webp",
+    "/assets/projects/vajra-west-city-05.webp",
+    "/assets/projects/vajra-west-city-07.webp",
+    "/assets/projects/vajra-west-city-06.webp",
+    "/assets/projects/vajra-west-city-04.webp"
+  ],
+  "photoDescription": "Aerial view of the towers beside the Outer Ring Road",
+  "locationKey": "hyderabad",
+  "localityKey": "hyd-osmannagar",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
