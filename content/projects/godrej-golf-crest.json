@@ -1,0 +1,60 @@
+{
+  "order": 510,
+  "id": "godrej-golf-crest",
+  "name": "Golf Crest at Godrej City",
+  "developer": "Godrej Properties",
+  "location": "Panvel, Navi Mumbai",
+  "config": "3 & 4 BHK villa-style residences",
+  "sizes": "",
+  "status": "New launch",
+  "possession": "December 2033",
+  "tags": [
+    "9-hole golf course",
+    "Within 145-acre Godrej City",
+    "20 min to NMIA"
+  ],
+  "description": "Golf Crest is a residential address within Godrej City, a 145-acre mixed-use township in Panvel, set between the Karnala Bird Sanctuary and the Matheran range. It offers 3 & 4 BHK villa-style residences with large decks, alongside a 9-hole golf course and padel courts in the township.",
+  "curation": [
+    "A 9-hole golf course and padel courts within the township, with township and phase clubhouses",
+    "Planned for low density, with larger homes and expansive decks that open to the surrounding hills",
+    "Developed by Caroa Properties LLP, in which Godrej Properties is a partner, which is worth noting during due diligence"
+  ],
+  "amenities": [
+    "9-hole golf course",
+    "Padel courts",
+    "Township and phase clubhouses",
+    "Forest walking trail",
+    "Gymnasium with calisthenics",
+    "Spa and recovery zone",
+    "Jogging track",
+    "High-street retail",
+    "24/7 ACLS ambulance with Apollo Hospitals"
+  ],
+  "connectivity": [
+    "20 min to Navi Mumbai International Airport",
+    "45–60 min to South Mumbai via Atal Setu",
+    "90–120 min to Alibaug and Lonavala",
+    "12 km to Karnala Bird Sanctuary"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-golf-crest-01.webp",
+    "/assets/projects/godrej-golf-crest-02.webp",
+    "/assets/projects/godrej-golf-crest-03.webp",
+    "/assets/projects/godrej-golf-crest-04.webp"
+  ],
+  "photoDescription": "Aerial view of Godrej City towers among green hills",
+  "locationKey": "navimumbai",
+  "localityKey": "nvm-panvel",
+  "nearbyKeys": [
+    "mumbai"
+  ],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest",
+    "second"
+  ]
+}
