@@ -1,0 +1,59 @@
+{
+  "order": 420,
+  "id": "godrej-reserve-kandivali",
+  "name": "Godrej Reserve",
+  "developer": "Godrej Properties",
+  "location": "Kandivali East, Mumbai",
+  "config": "3 & 4 BHK apartments",
+  "sizes": "1,461 – 2,013 sq.ft carpet",
+  "status": "Under construction",
+  "possession": "June 2031",
+  "tags": [
+    "57,000 sq.ft clubhouse",
+    "6 acres of landscaping",
+    "2 min to Metro Line 7"
+  ],
+  "description": "Godrej Reserve is a resort-inspired high-rise development on Akurli Road in Kandivali East, opposite Growel's 101. The site was once a gaushala with mature tree cover, and the towers now sit around about 6 acres of landscaping over two levels, laid out as four themed zones: Forest Retreat, Tropical Oasis, Spring Terraces, and Green Acres.",
+  "curation": [
+    "9.5 ft floor-to-ceiling heights, with 6 apartments per floor in Towers 1 and 2",
+    "Tower 2 is the only tower still offering 4 BHK, and it faces a 3.5-acre amenity zone",
+    "Akurli and Poisar Metro stations on Line 7 are about 2 minutes away"
+  ],
+  "amenities": [
+    "57,000 sq.ft clubhouse",
+    "13,000 sq.ft swimming pool",
+    "10,000 sq.ft Zen Garden",
+    "Amphitheatre",
+    "Meditation zone",
+    "Badminton courts",
+    "About 6 acres of landscaping over two levels"
+  ],
+  "connectivity": [
+    "On Akurli Road, opposite Growel's 101 Mall",
+    "Akurli and Poisar Metro (Line 7) about 2 minutes",
+    "Kandivali railway station about 5 minutes",
+    "Parallel to the Western Express Highway"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-reserve-kandivali-01.webp",
+    "/assets/projects/godrej-reserve-kandivali-02.webp",
+    "/assets/projects/godrej-reserve-kandivali-03.webp",
+    "/assets/projects/godrej-reserve-kandivali-04.webp",
+    "/assets/projects/godrej-reserve-kandivali-06.webp",
+    "/assets/projects/godrej-reserve-kandivali-07.webp",
+    "/assets/projects/godrej-reserve-kandivali-05.webp"
+  ],
+  "photoDescription": "Resort-style towers rising over layered landscaped gardens",
+  "locationKey": "mumbai",
+  "localityKey": "mum-kandivali",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2",
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
