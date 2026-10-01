@@ -1,0 +1,61 @@
+{
+  "order": 600,
+  "id": "brigade-icon",
+  "name": "Brigade Icon",
+  "developer": "Brigade Group",
+  "location": "Mount Road, Chennai",
+  "config": "3, 4 & 5 bed residences, including duplexes and penthouses",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "June 2030",
+  "tags": [
+    "G+38 residential tower",
+    "About 200 residences",
+    "100 m to Thousand Lights Metro"
+  ],
+  "description": "A mixed-use development of more than five acres on Mount Road, with about 200 residences in a G+38 tower alongside retail and offices. The tower has a copper-tinged facade and sits 100 m from Thousand Lights Metro.",
+  "curation": [
+    "About 200 homes in a single tower on Anna Salai",
+    "Part of a residential, retail, and office development",
+    "Metro station at the doorstep"
+  ],
+  "amenities": [
+    "Lap pool with jacuzzi",
+    "Fitness studio",
+    "Spa and salon",
+    "Sky lounge",
+    "Panorama deck",
+    "Skyline jogging path",
+    "Garden pavilion",
+    "Multimedia lounge",
+    "Ballroom",
+    "Concierge"
+  ],
+  "connectivity": [
+    "Thousand Lights Metro, 100 m",
+    "Marina Beach, 2.7 km",
+    "Egmore station, 3 km",
+    "Chennai Central station, 5 km",
+    "Chennai airport, 14 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-icon-01.webp",
+    "/assets/projects/brigade-icon-02.webp",
+    "/assets/projects/brigade-icon-03.webp",
+    "/assets/projects/brigade-icon-04.webp",
+    "/assets/projects/brigade-icon-05.webp",
+    "/assets/projects/brigade-icon-06.webp"
+  ],
+  "photoDescription": "Residential tower and office block at dusk, from above",
+  "locationKey": "chennai",
+  "localityKey": "che-mountroad",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
