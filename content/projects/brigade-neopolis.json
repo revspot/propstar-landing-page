@@ -1,0 +1,58 @@
+{
+  "order": 630,
+  "id": "brigade-neopolis",
+  "name": "Brigade Gateway at Neopolis",
+  "developer": "Brigade Group",
+  "location": "Kokapet, Hyderabad",
+  "config": "3 & 4 bed residences and 5 & 6 bed sky duplexes",
+  "sizes": "3,067 – 9,859 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "Integrated 9.7-acre campus",
+    "World Trade Center on site",
+    "Off the Outer Ring Road"
+  ],
+  "description": "Two 58-floor residential towers within a 9.7-acre integrated development at Neopolis, Kokapet, which also includes a World Trade Center office tower, an InterContinental hotel, and an Orion Mall. The residences are served by a 50,000 sq.ft clubhouse.",
+  "curation": [
+    "Office, hotel, mall, and homes on one campus",
+    "Two towers of 297 homes each",
+    "Close to the Financial District and Gachibowli"
+  ],
+  "amenities": [
+    "Clubhouse (about 50,000 sq.ft)",
+    "Swimming pool",
+    "Gym and aerobics",
+    "Squash and badminton courts",
+    "Mini theatre",
+    "Co-working space",
+    "Coffee station",
+    "Multipurpose hall",
+    "Supermarket"
+  ],
+  "connectivity": [
+    "Just off the Outer Ring Road",
+    "Close to the Financial District and Gachibowli",
+    "Indus, Oakridge, and CHIREC schools nearby",
+    "Marriott, Sheraton, and Hyatt hotels nearby"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-neopolis-01.webp",
+    "/assets/projects/brigade-neopolis-02.webp",
+    "/assets/projects/brigade-neopolis-03.webp",
+    "/assets/projects/brigade-neopolis-04.webp"
+  ],
+  "photoDescription": "Office and residential towers at dusk",
+  "locationKey": "hyderabad",
+  "localityKey": "hyd-kokapet",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2",
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
