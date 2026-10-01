@@ -1,0 +1,60 @@
+{
+  "order": 520,
+  "id": "prestige-city-indirapuram",
+  "name": "The Prestige City Indirapuram",
+  "developer": "Prestige Group",
+  "location": "Indirapuram Extension, Ghaziabad",
+  "config": "2, 3 & 4 BHK apartments, plus Sky Mansions and Villaments",
+  "sizes": "",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "62.5-acre township",
+    "25+ acres of central greens",
+    "Four homes per floor"
+  ],
+  "description": "A 62.5-acre township on NH-24 at Indirapuram Extension, with 23 towers of 41 to 50 floors set around a central park of more than 25 acres. The community includes three clubhouses and The Forum Mall, an 8 lakh sq.ft retail complex.",
+  "curation": [
+    "Only four homes per floor, so every home has at least two open sides",
+    "Towers line the edge of a vehicle-free central park with more than a thousand trees",
+    "A 1.85 km four-lane peripheral boulevard keeps traffic to the edges, behind a seven-acre green frontage on the highway"
+  ],
+  "amenities": [
+    "Three clubhouses",
+    "Central park of 25+ acres",
+    "Seven-acre green frontage with water bodies and lawns",
+    "Sports courts",
+    "Children's play zones",
+    "The Forum Mall (8 lakh sq.ft retail)",
+    "Provision for two schools",
+    "Provision for a health care centre"
+  ],
+  "connectivity": [
+    "On NH-24 and the Delhi-Meerut Expressway",
+    "About 3.2 km to Noida Electronic City Metro Station",
+    "About 4.4 km to Fortis Hospital Noida",
+    "About 4.8 km to Ghaziabad Railway Station",
+    "About 33.9 km to Indira Gandhi International Airport"
+  ],
+  "developerNote": "",
+  "images": [
+    "/assets/projects/prestige-city-indirapuram-01.webp",
+    "/assets/projects/prestige-city-indirapuram-02.webp",
+    "/assets/projects/prestige-city-indirapuram-03.webp",
+    "/assets/projects/prestige-city-indirapuram-05.webp",
+    "/assets/projects/prestige-city-indirapuram-04.webp",
+    "/assets/projects/prestige-city-indirapuram-06.webp",
+    "/assets/projects/prestige-city-indirapuram-07.webp"
+  ],
+  "photoDescription": "High-rise towers around an open green",
+  "locationKey": "ncr",
+  "localityKey": "ncr-indirapuram",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
