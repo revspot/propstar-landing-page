@@ -1,0 +1,60 @@
+{
+  "order": 500,
+  "id": "godrej-eternal-palms",
+  "name": "Godrej Eternal Palms",
+  "developer": "Godrej Properties",
+  "location": "Sanpada, Navi Mumbai",
+  "config": "2 & 3 BHK apartments",
+  "sizes": "806 – 1,165 sq.ft",
+  "status": "Under construction",
+  "possession": "",
+  "tags": [
+    "4 apartments per floor",
+    "Twin towers on 1.6 acres",
+    "1 min to Sion-Panvel Expressway"
+  ],
+  "description": "Godrej Eternal Palms is a twin-tower development off Palm Beach Road in Sanpada, Navi Mumbai, set on 1.6 acres. The G+37 towers hold 2 & 3 BHK homes, with only four apartments per floor, above five levels of podium parking and an amenity deck on the sixth level.",
+  "curation": [
+    "A low-density plan, with only four apartments per floor across the twin towers",
+    "Amenities over three levels: ground-level gardens, the E-Deck podium with a half-Olympic-length pool, and a rooftop overlooking the Palm Beach mangroves",
+    "A design team of Soyuz Talib Architects for architecture, EPLA Studio for landscape, and Open Atelier for interiors"
+  ],
+  "amenities": [
+    "Half-Olympic-length swimming pool and jacuzzis",
+    "Spa",
+    "Rooftop lounges with mangrove views",
+    "Landscaped gardens and tree courts",
+    "Open lawns and morning fitness areas",
+    "Gymnasium",
+    "Sky lounge",
+    "Sports courts"
+  ],
+  "connectivity": [
+    "1 min to the Sion-Panvel Expressway",
+    "5 min to Sanpada and Vashi railway stations",
+    "7 min to Inorbit Mall, Vashi",
+    "22 min to Atal Setu (MTHL)",
+    "28 min to BKC"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-eternal-palms-01.webp",
+    "/assets/projects/godrej-eternal-palms-02.webp",
+    "/assets/projects/godrej-eternal-palms-03.webp",
+    "/assets/projects/godrej-eternal-palms-04.webp",
+    "/assets/projects/godrej-eternal-palms-05.webp"
+  ],
+  "photoDescription": "Twin towers above a landscaped podium under a blue sky",
+  "locationKey": "navimumbai",
+  "localityKey": "nvm-sanpada",
+  "nearbyKeys": [
+    "mumbai"
+  ],
+  "budgetBands": [
+    "b2"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
