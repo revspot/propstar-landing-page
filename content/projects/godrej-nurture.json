@@ -1,0 +1,60 @@
+{
+  "order": 480,
+  "id": "godrej-nurture",
+  "name": "Godrej Nurture",
+  "developer": "Godrej Properties",
+  "location": "Bhandup West, Mumbai",
+  "config": "2 & 3 BHK apartments",
+  "sizes": "546 – 983 sq.ft",
+  "status": "Under construction",
+  "possession": "March 2031",
+  "tags": [
+    "Next to upcoming Metro Line 4",
+    "2.5+ acres of open space",
+    "16,000+ sq.ft clubhouse"
+  ],
+  "description": "Godrej Nurture is a residential development on LBS Marg in Bhandup West, Mumbai, set across 6.5+ acres with more than 2.5 acres of open space. It offers 2 & 3 BHK homes, each with a deck, in three towers planned around a two-level clubhouse with amenities designed for children.",
+  "curation": [
+    "Next to the upcoming Metro Line 4 station and minutes from the upcoming Goregaon-Mulund Link Road",
+    "Only three towers on 6.5+ acres, with a deck in every apartment",
+    "A 16,000+ sq.ft clubhouse across two levels, with child-focused spaces such as a kids’ pool, hobby area, and dance studio"
+  ],
+  "amenities": [
+    "Swimming pool and kids’ pool",
+    "Two-level clubhouse",
+    "Kids’ play area and hobby area",
+    "Dance studio",
+    "Amphitheatre",
+    "Basketball court",
+    "Badminton and squash courts",
+    "Nature walk",
+    "Senior citizens’ corner"
+  ],
+  "connectivity": [
+    "2 min to the upcoming Metro Line 4 station",
+    "4 min to the upcoming Goregaon-Mulund Link Road",
+    "6 min to Nahur railway station",
+    "8 min to the Eastern Express Highway",
+    "24 min to BKC and Chhatrapati Shivaji Maharaj International Airport"
+  ],
+  "developerNote": "Established in 1990, Godrej Properties is the first real estate company in India to have ISO certification, and is currently developing landmark projects across 15+ cities covering over 21.7 million square metres.",
+  "images": [
+    "/assets/projects/godrej-nurture-01.webp",
+    "/assets/projects/godrej-nurture-02.webp",
+    "/assets/projects/godrej-nurture-03.webp",
+    "/assets/projects/godrej-nurture-05.webp",
+    "/assets/projects/godrej-nurture-06.webp",
+    "/assets/projects/godrej-nurture-04.webp"
+  ],
+  "photoDescription": "Three residential towers rising beside a city road",
+  "locationKey": "mumbai",
+  "localityKey": "mum-bhandup",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
