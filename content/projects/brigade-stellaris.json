@@ -1,0 +1,62 @@
+{
+  "order": 610,
+  "id": "brigade-stellaris",
+  "name": "Brigade Stellaris",
+  "developer": "Brigade Group",
+  "location": "Velachery, Chennai",
+  "config": "3, 4 & 5 bed duplex residences",
+  "sizes": "2,033 – 6,885 sq.ft",
+  "status": "New launch",
+  "possession": "",
+  "tags": [
+    "Duplex homes only",
+    "284 homes in four towers",
+    "200 m to Phoenix Marketcity"
+  ],
+  "description": "A project of 284 duplex residences in four towers on about 5.2 acres in Velachery, designed by Singapore-based SOG Design. The plan follows a biophilic approach and includes an elevated clubhouse.",
+  "curation": [
+    "Every home is a duplex",
+    "Architecture by SOG Design, Singapore",
+    "Phoenix Marketcity 200 m away"
+  ],
+  "amenities": [
+    "Swimming pool",
+    "Fitness studio",
+    "Spa and wellness",
+    "Squash and badminton courts",
+    "Multimedia lounge",
+    "BBQ and dining",
+    "Roof seating",
+    "Business centre",
+    "Yoga and dance deck",
+    "Nursery and kids' play"
+  ],
+  "connectivity": [
+    "Phoenix Marketcity, 200 m",
+    "Orchids International School, 2.1 km",
+    "Guru Nanak College, 2.2 km",
+    "Anna University, 4.7 km",
+    "IIT Madras, 9.6 km"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-stellaris-01.webp",
+    "/assets/projects/brigade-stellaris-02.webp",
+    "/assets/projects/brigade-stellaris-03.webp",
+    "/assets/projects/brigade-stellaris-04.webp",
+    "/assets/projects/brigade-stellaris-05.webp",
+    "/assets/projects/brigade-stellaris-06.webp"
+  ],
+  "photoDescription": "Residential towers rising over greenery",
+  "locationKey": "chennai",
+  "localityKey": "che-velachery",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b2",
+    "b3"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
