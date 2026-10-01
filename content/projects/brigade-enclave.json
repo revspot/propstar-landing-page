@@ -1,0 +1,59 @@
+{
+  "order": 620,
+  "id": "brigade-enclave",
+  "name": "Brigade Enclave",
+  "developer": "Brigade Group",
+  "location": "Moti Nagar, Hyderabad",
+  "config": "3 & 4 BHK apartments",
+  "sizes": "1,868 – 2,632 sq.ft",
+  "status": "Under construction",
+  "possession": "December 2030",
+  "tags": [
+    "Low-rise G+6 blocks",
+    "No common walls",
+    "Walk to Erragadda Metro"
+  ],
+  "description": "A low-rise project of 215 apartments in G+6 blocks at Moti Nagar, within walking distance of Erragadda Metro. Homes have no common walls, and a 20,000 sq.ft clubhouse serves the community.",
+  "curation": [
+    "Only 215 homes in blocks of seven floors",
+    "No common walls between homes",
+    "Walking distance to Erragadda Metro"
+  ],
+  "amenities": [
+    "Clubhouse (about 20,000 sq.ft)",
+    "Pool and deck",
+    "Gym",
+    "Badminton and pickleball",
+    "Basketball court",
+    "Yoga studio",
+    "Steam and sauna",
+    "Reflexology walkway",
+    "Party lawn",
+    "Kids' play area and pet park"
+  ],
+  "connectivity": [
+    "Walking distance to Erragadda Metro",
+    "Don Bosco High School, 550 m",
+    "Moti Nagar Shopping Complex, 600 m",
+    "Sunridge Hospital, 700 m"
+  ],
+  "developerNote": "Founded in 1986, Brigade Group is a publicly listed company on the NSE and BSE. Its portfolio spans residential, commercial, retail, and hospitality developments, from apartments and integrated enclaves to offices, malls, hotels, and schools.",
+  "images": [
+    "/assets/projects/brigade-enclave-01.webp",
+    "/assets/projects/brigade-enclave-02.webp",
+    "/assets/projects/brigade-enclave-03.webp",
+    "/assets/projects/brigade-enclave-04.webp",
+    "/assets/projects/brigade-enclave-05.webp"
+  ],
+  "photoDescription": "Aerial view of low-rise residential blocks",
+  "locationKey": "hyderabad",
+  "localityKey": "hyd-motinagar",
+  "nearbyKeys": [],
+  "budgetBands": [
+    "b1"
+  ],
+  "purposes": [
+    "live",
+    "invest"
+  ]
+}
