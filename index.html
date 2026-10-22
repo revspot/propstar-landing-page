@@ -59,6 +59,23 @@
   gtag('js', new Date());
   gtag('config', 'G-DNDDSBZ5VS', { send_page_view: false });
 </script>
+<!-- Meta Pixel. Same production-only block as GA4. No inline PageView here:
+     trackPageView() fires it per route (boot included), so the first view is
+     not counted twice. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1530533711540399');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1530533711540399&ev=PageView&noscript=1"
+/></noscript>
 <!-- /ssg:analytics -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -698,6 +715,7 @@
       quiz_budget: body.quiz_budget
       /* never name/phone/email — GA4 forbids PII and will terminate for it */
     });
+    if (window.fbq) window.fbq('track', 'Lead');
 
     return postLead(body)['catch'](function (err) {
       queuePush(body);
@@ -871,6 +889,7 @@
 
   function trackPageView() {
     track('page_view', { page_location: location.href, page_title: document.title });
+    if (window.fbq) window.fbq('track', 'PageView');
   }
 
   /* one quiz_start per session, not one per answer */
